@@ -1,4 +1,14 @@
 "use strict";
+// console.log = (...e) => {for(var i=0;i<e.length;i++)
+//     {document.getElementById("log").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + "<br />"}};
+//     var customNameOfLog = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("log2").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + "<br />"}};
+
+// customNameOfLog(5 * 2 <= 12);
+// customNameOfLog(55 > 22);
+// customNameOfLog(16 / 4 == 4);
+// customNameOfLog(8 + 2 < 128);
+// customNameOfLog(32 * 8 != 255);
+
 /* Dag Fredriksson och da281a */
 /**
  * Uppgift 1
@@ -27,3 +37,26 @@ const learning = "It's Learning".substring(5).toUpperCase();
 const goodParts = "JavaScript: The Good Parts".substring(16).toLowerCase();
 console.log(learning);
 console.log(goodParts);
+/**
+ * Uppgift 4
+ * =========
+ */
+var numbers = [128, 256, 512, 1024, 2048];
+let sumOfNumbers = 0;
+
+numbers.forEach( num => {
+    sumOfNumbers += num;
+})
+
+const avgNumber = sumOfNumbers / numbers.length;
+console.log(avgNumber); 
+
+var numbers2 = [128, 256, 512, 1024, 2048, 32];
+sumOfNumbers = 0;
+
+numbers2.forEach( num => {
+    sumOfNumbers += num;
+})
+
+console.log(sumOfNumbers);
+
