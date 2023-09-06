@@ -1,14 +1,24 @@
 "use strict";
+// console.log = (...e) => {for(var i=0;i<e.length;i++)
+//     {document.getElementById("log").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + "<br />"}};
+//     var customNameOfLog = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("log2").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + "<br />"}};
+
+// customNameOfLog(5 * 2 <= 12);
+// customNameOfLog(55 > 22);
+// customNameOfLog(16 / 4 == 4);
+// customNameOfLog(8 + 2 < 128);
+// customNameOfLog(32 * 8 != 255);
+
 /* Dag Fredriksson och da281a */
 /**
  * Uppgift 1
  * =========
  */
-console.log("Uppgift 1.1 ", 5 * 2 <= 12);
-console.log("Uppgift 1.2 ", 55 > 22);
-console.log("Uppgift 1.3 ", 16 / 4 == 4);
-console.log("Uppgift 1.4 ", 8 + 2 < 128);
-console.log("Uppgift 1.5 ", 32 * 8 != 255);
+console.log(5 * 2 <= 12);
+console.log(55 > 22);
+console.log(16 / 4 == 4);
+console.log(8 + 2 < 128);
+console.log(32 * 8 != 255);
 
 /**
  * Uppgift 2
