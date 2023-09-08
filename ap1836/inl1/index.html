@@ -29,6 +29,8 @@
                 color: #d63200;
                 padding: 1px 3px;
                 display: inline;
+                word-wrap: break-word;
+                word-break: break-all;
             }
             .unset-highlighted {
                 background-color: rgb(237, 237, 237);
@@ -45,6 +47,29 @@
             }
             code span {
                 display: block;
+            }
+            .row {
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+            }
+            .row li {
+                //flex: 1 1 33.1%;
+            }
+            .p-r {
+                padding-right: 1rem;
+            }
+            .li-40 {
+                flex: 1 1 40%;
+            }
+            .li-20 {
+                min-width: 20%;
+            }
+            .list-number-container {
+                display: flex;
+            }
+            .list-number-container .list-number {
+                margin-right: .2rem;
             }
         </style>
     </head>
@@ -147,6 +172,158 @@
                     <code id="task3"></code>
                 </code>
             </div>
+        </div>
+
+        <h2>Uppgift 4</h2>
+        <p>I uppgift 4 ska ni utgå från följande array:
+            var numbers = [
+            <span class="highlighted">128</span>, 
+            <span class="highlighted">256</span>, 
+            <span class="highlighted">512</span>, 
+            <span class="highlighted">1024</span>, 
+            <span class="highlighted">2048</span>];
+        </p>
+        <div class="highlight">
+            <ul class="row">
+                <li class="li-40"><h3>Test</h3></li>
+                <li class="li-40"><h3>Lösning</h3></li>
+                <li class="li-20"><h3>Konsolsvar</h3></li>
+                <li  class="li-40">
+                    <div class="list-number-container">
+                        <div class="list-number">1.</div> 
+                        <div>
+                            Skapa en variabel med namnet 
+                            <span class="highlighted">sumOfNumbers</span> 
+                            vars värde är summan av alla siffrorna i arrayen <span class="highlighted">numbers</span>
+                            , skriv även ut denna i konsollen
+                        </div>
+                    </div>
+                </li>
+                <li class="li-40">
+                    <div>
+                        const learning = 
+                        <code class="highlighted">
+                            "It's Learning".substring(5).toUpperCase(); console.log(learning)
+                        </code>
+                        );
+                    </div>
+                </li>
+                <li  class="li-20">
+                    <code id="task4.1"></code>
+                </li>
+                <li  class="li-40">
+                    <div class="list-number-container">
+                        <div class="list-number">2.</div> 
+                        <div>
+                            Skapa en variabel med namnet 
+                            <span class="highlighted">avgNumber</span> 
+                            vars värde är medelvärdet av alla siffrorna i krrayen 
+                            <span class="highlighted">numbers</span> 
+                            (detta görs genom <span class="highlighted">summan / antal</span>). 
+                            Tänk på att medelvärdet ska kunna räknas ut även om vi själva lägger 
+                            till eller tar bort ett par siffror, dvs. är det inte tillåtet att skriva 
+                            <span class="highlighted">summan / 5 </span>(för att vi har fem siffror). 
+                            Skriv även ut medelvärdet i konsollen
+                        </div>
+                    </div>
+                </li>
+                <li class="li-40">
+                    <div>
+                        const learning = 
+                        <code class="highlighted">
+                            "It's Learning".substring(5).toUpperCase(); console.log(learning)
+                        </code>
+                        );
+                        const goodParts = 
+                        <code>
+                            <span class="highlighted">
+                                "JavaScript: The Good Parts".substring(16).toLowerCase(); console.log(goodParts)
+                            </span>
+                        </code>
+                        );
+                    </div>
+                </li>
+                <li  class="li-20">
+                    <code id="task4.2"></code>
+                </li>
+                <li  class="li-40">
+                    <div class="list-number-container">
+                        <div class="list-number">3.</div> 
+                        <div>
+                            Lägg till ett element (siffra) i slutet av arrayen vars värde är summan av alla 
+                            siffror (tips nyttja variabeln ni tidigare skapade), 
+                            skriv även ut den nya arrayen i konsollen
+                        </div>
+                    </div>
+                </li>
+                <li class="li-40">
+                    <div>
+                        const goodParts = 
+                        <code class="highlighted">
+                            "JavaScript: The Good Parts".substring(16).toLowerCase(); console.log(goodParts)
+                        </code>
+                        );
+                    </div>
+                </li>
+                <li  class="li-20">
+                    <code id="task4.3"></code>
+                </li>
+            </ul>
+            <!-- <ol class="row">
+                <li>
+                    <div>
+                        Skapa en variabel med namnet 
+                    <span class="highlighted">sumOfNumbers</span> 
+                    vars värde är summan av alla siffrorna i arrayen <span class="highlighted">numbers</span>
+                    , skriv även ut denna i konsollen
+                    </div>
+                </li>
+                <li>
+                    <code>
+                        <span>const learning =  
+                            <span class="highlighted">"It's Learning".substring(5).toUpperCase(); console.log(learning)</span>);
+                        </span>
+                    </code>
+                </li>
+                <li>
+                    <code id="task4.1"></code>
+                </li>
+                <li> 
+                    2. Skapa en variabel med namnet 
+                    <span class="highlighted">avgNumber</span> 
+                    vars värde är medelvärdet av alla siffrorna i krrayen 
+                    <span class="highlighted">numbers</span> 
+                    (detta görs genom <span class="highlighted">summan / antal</span>). 
+                    Tänk på att medelvärdet ska kunna räknas ut även om vi själva lägger 
+                    till eller tar bort ett par siffror, dvs. är det inte tillåtet att skriva 
+                    <span class="highlighted">summan / 5 </span>(för att vi har fem siffror). 
+                    Skriv även ut medelvärdet i konsollen
+                </li>
+                <li>
+                    <code>
+                        <span>const goodParts = <span class="highlighted">"JavaScript: The Good Parts".substring(16).toLowerCase(); console.log(goodParts)</span>);</span>
+                    </code>
+                </li>
+                <li>
+                    <code id="task4.2">
+                        
+                    </code>
+                <li>
+                    3. Lägg till ett element (siffra) i slutet av arrayen vars värde är summan av alla 
+                    siffror (tips nyttja variabeln ni tidigare skapade), 
+                    skriv även ut den nya arrayen i konsollen
+                </li>
+                <li>
+                    <code>
+                        <span>const goodParts = <span class="highlighted">"JavaScript: The Good Parts".substring(16).toLowerCase(); console.log(goodParts)</span>);</span>
+                    </code>
+                </li>
+                <li>
+                    <code id="task4.3">
+                        
+                    </code>
+                </li> -->
+            </ol> 
         </div>
         <script src="customLogMain.js"></script>
     </body>
