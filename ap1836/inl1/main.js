@@ -1,5 +1,5 @@
 "use strict";
-/* Dag Fredriksson och da281a */
+/* Dag Fredriksson, da281a */
 /**
  * Uppgift 1
  * =========
@@ -44,9 +44,9 @@ numbers.forEach( num => {
     sumOfNumbers += num;
 })
 
-console.log("Uppgift 4.1: ", sumOfNumbers); //Uppgift 4.1
+console.log("Uppgift 4.1: ", sumOfNumbers);
 const avgNumber = sumOfNumbers / numbers.length;
-console.log("Uppgift 4.2: ", avgNumber); //Uppgift 4.2
+console.log("Uppgift 4.2: ", avgNumber);
 
 var numbers2 = [128, 256, 512, 1024, 2048, 32];
 sumOfNumbers = 0;
@@ -55,7 +55,7 @@ numbers2.forEach( num => {
     sumOfNumbers += num;
 })
 
-console.log("Uppgift 4.3: ", sumOfNumbers); //Uppgift 4.3
+console.log("Uppgift 4.3: ", sumOfNumbers);
 
 /**
  * Uppgift 5
@@ -64,7 +64,7 @@ console.log("Uppgift 4.3: ", sumOfNumbers); //Uppgift 4.3
 
 var countries = ["Sweden", "Denmark", "Finland", "Norway"];
 
-console.log("Uppgift 5.1 ", countries[1].substring(0, 3)); //Uppgift 5.1
+console.log("Uppgift 5.1 ", countries[1].substring(0, 3));
 
 var amountOfcountries = countries.length;
 var amountOfcountryLetters = "";
@@ -72,9 +72,6 @@ countries.forEach( letters => {
     amountOfcountryLetters += letters;
 })
 console.log("Uppgift 5.2: ", amountOfcountryLetters.length / amountOfcountries);
-
-// Skriv ut de tre första bokstäverna av det andra elementet i konsollen
-// Räkna ut och skriv ut medelvärdet för antal bokstäver för alla element i konsollen
 
 /**
  * Uppgift 6
@@ -116,14 +113,9 @@ console.log("Uppgift 8: ", actors.join(' - '));
  * =========
  */
 
-// I uppgift 9 ska ni använda er av en if-sats som styr vilken utskrift det 
-//blir i konsollen givet värdet på en variabel. 
-//Denna if-sats ska innehålla tre delar och utföra jämförelser mot en variabel med namnet amount.
-
-//var amount = 49;
-var amount = "50";
-//var amount = "65";
-
+//var amount = 49; // Less then 50!
+var amount = "50"; // Optimal range for the amount!
+//var amount = "65"; // Too much!
 
 if (amount < 50) {
     console.log("Uppgift 9: Less then 50!")
@@ -138,23 +130,9 @@ if (amount < 50) {
  * =========
  */
 
-// let str = '';
-
-// for (let i = 0; i < 10; i++) {
-//   str = str + "x\n";
-// }
-
-//console.log(str);
-// Expected output: "012345678"
-
 const hash = '#';
 let str = '';
-//let output = '';
 console.log("Uppgift 10:");
 for (let i = 0; i < 8; i++) {
-  console.log(str += hash[i % hash.length]);
-  //output += str + '\n';
+  console.log(str += hash);
 }
-//console.log("str: ", str);
-// console.log("hash: ", hash);
-// console.log("output:", output);

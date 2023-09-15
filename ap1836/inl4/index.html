@@ -5,159 +5,19 @@
         <meta charset="utf-8">
         <style>
             body {
-               margin: 2rem;
+                margin: 2rem;
             }
             ul {
                 list-style-type: none; 
                 padding: 0; 
                 margin: 0; 
             }
-            .highlight {
-                overflow-x: auto;
-                background-color: rgb(237, 237, 237);
-                line-height: 1.45em;
-                padding: 16px 20px;
-                margin: 24px 0px;
-                border-radius: 1px;
-                display: flex;
-            }
-            .highlight div {
-                margin-right: 32px;
-            } 
-            .highlighted {
-                background-color: rgb(237, 237, 237);
-                color: #d63200;
-                padding: 1px 3px;
-                display: inline;
-            }
-            .unset-highlighted {
-                background-color: rgb(237, 237, 237);
-                color: #000;
-                padding: 1px 3px;
-                display: inline;
-            }
-            .highlighted-true {
-                color: blue;
-            }
-            code {
-                font-size: 1rem;
-                font-family: "Roboto Mono", monospace;
-            }
-            code span {
-                display: block;
-            }
         </style>
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="/ap1836/">Länksida</a></li>
-                <li><a href="inl4.html">Enkel HTML-fil för inlämningsuppgift 4</a></li>
-            </ul>
-        </nav>
         <h1>Inlämningsuppgift 4</h1>
-        <h2>Uppgift 1</h2>
-        <p>Utifrån kodexemplet nedan ska ni färdigställa samtliga utskrifter.</p>
-        <p>Alla utskrifter ska ge värdet <span class="highlighted">true</span> och ni får endast använda följande operatorer en gång: 
-            <span class="highlighted"><</span>,
-            <span class="highlighted">></span>, 
-            <span class="highlighted"><=</span>, 
-            <span class="highlighted">==</span>,
-            <span class="highlighted">!=</span>.
-        </p>
-        <div class="highlight">
-            <div>
-                <h3>Test</h3>
-                <code>
-                    <span>console.log( <span class="highlighted">5 <span class="unset-highlighted">*</span> 2<span class="unset-highlighted"> ? </span>12</span>);</span>
-                    <span>console.log( <span class="highlighted">55 ? 22</span>)</span>
-                    <span>console.log( <span class="highlighted">16 <span class="unset-highlighted">/</span> 4 <span class="unset-highlighted"> ? </span>4</span>);</span>
-                    <span>console.log( <span class="highlighted">8 <span class="unset-highlighted">+</span> 2<span class="unset-highlighted"> ? </span>128)</span>;</span>
-                    <span>console.log( <span class="highlighted">32 <span class="unset-highlighted">*</span> 8<span class="unset-highlighted"> ? </span>255</span>);</span>
-                </code>
-            </div>
-            <div>
-                <h3>Lösning</h3>
-                <code>
-                    <span>console.log( <span class="highlighted">5 <span class="unset-highlighted">*</span> 2<span class="unset-highlighted"> <= </span>12</span>);</span>
-                    <span>console.log( <span class="highlighted">55 > 22</span>)</span>
-                    <span>console.log( <span class="highlighted">16 <span class="unset-highlighted">/</span> 4 <span class="unset-highlighted"> == </span>4</span>);</span>
-                    <span>console.log( <span class="highlighted">8 <span class="unset-highlighted">+</span> 2<span class="unset-highlighted"> < </span>128)</span>;</span>
-                    <span>console.log( <span class="highlighted">32 <span class="unset-highlighted">*</span> 8<span class="unset-highlighted"> != </span>255</span>);</span>
-                </code>
-            </div>
-            <div>
-                <h3>Konsolsvar</h3>
-                <code>
-                    <span class="highlighted-true">true</span>
-                    <span class="highlighted-true">true</span>
-                    <span class="highlighted-true">true</span>
-                    <span class="highlighted-true">true</span>
-                    <span class="highlighted-true">true</span>
-                </code>
-            </div>
-        </div>
-        <h2>Uppgift 2</h2>
-        <p>Använd sträng-metoden .substring() för att skriva ut följande delar av dessa strängar:</p>
-        <div class="highlight">
-            <div>
-                <h3>Test</h3>
-                <ol>
-                    <li>Skriv ut <span class="highlighted">"Tis"</span> av <span class="highlighted">"Tisdag"</span></li>
-                    <li>Skriv ut <span class="highlighted">burgare"</span>" av <span class="highlighted">"Hamburgare"</span></li>
-                    <li>Skriv ut <span class="highlighted">"be back"</span> av <span class="highlighted">"I'll be back"</span></li>
-                </ol>
-            </div>
-            <div>
-                <h3>Lösning</h3>
-                <code>
-                    <span>const tuesday = "Tisdag"; console.log( <span class="highlighted">tuesday.substring(0, 3)</span>);</span>
-                    <span>const hamburger = "Hamburgare; console.log( <span class="highlighted">hamburger.substring(3)</span>);</span>
-                    <span>const beBack = "I'll be back"; console.log( <span class="highlighted">beBack.substring(5)</span>);</span>
-                </code>
-            </div>
-            <div>
-                <h3>Konsolsvar</h3>
-                <code>
-                    <span>Tis</span>
-                    <span>burgare</span>
-                    <span>be back</span>
-                </code>
-            </div>
-        </div>
-        <h2>Uppgift 3</h2>
-        <p>Kombinera sträng-metoderna 
-            <span class="highlighted">.substring()</span>, 
-            <span class="highlighted">.toLowerCase()</span> och 
-            <span class="highlighted">.toUpperCase()</span> 
-            för att skriva ut följande delar av dessa strängar:
-        </p>
-        <div class="highlight">
-            <div>
-                <h3>Test</h3>
-                <ol>
-                    <li>Skriv ut <span class="highlighted">"LEARNING"</span> 
-                        av <span class="highlighted">"It's Learning"</span></li>
-                    <li>Skriv ut <span class="highlighted">"good parts"</span> 
-                        av <span class="highlighted">"JavaScript: The Good Parts"</span></li>
-                </ol>
-            </div>
-            <div>
-                <h3>Lösning</h3>
-                <code>
-                    <span>console.log( <span class="highlighted">5 <span class="unset-highlighted">*</span> 2<span class="unset-highlighted"> <= </span>12</span>);</span>
-                    <span>console.log( <span class="highlighted">55 > 22</span>)</span>
-                </code>
-            </div>
-            <div>
-                <h3>Konsolsvar</h3>
-                <code>
-                    <span>LEARNING</span>
-                    <span>good parts</span>
-                </code>
-            </div>
-        </div>
-        <div id="log2"></div>
+        <h2>Dag Fredriksson</h2>
+        <p>Inte påbörjad</p>
         <script src="main.js"></script>
     </body>
 </html>
