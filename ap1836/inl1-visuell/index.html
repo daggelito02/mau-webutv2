@@ -31,7 +31,7 @@
                 padding: 1px 3px;
                 display: inline;
                 word-wrap: break-word;
-                word-break: break-all;
+                /* word-break: break-all; */
             }
             .unset-highlighted {
                 background-color: rgb(237, 237, 237);
@@ -42,7 +42,7 @@
             .highlighted-true {
                 color: blue;
             }
-            code {
+            code, body {
                 font-size: 1rem;
                 font-family: "Roboto Mono", monospace;
             }
@@ -54,17 +54,38 @@
                 width: 100%;
                 flex-wrap: wrap;
             }
-            .row li {
+            /* .row li {
                 //flex: 1 1 33.1%;
-            }
+            } */
             .p-r {
                 padding-right: 1rem;
+            }
+            .li-20 {
+                min-width: 20%;
+            }
+            .li-30 {
+                flex: 1 1 30%;
             }
             .li-40 {
                 flex: 1 1 40%;
             }
-            .li-20 {
-                min-width: 20%;
+            .li-50 {
+                flex: 1 1 50%;
+            }
+            .col1 {
+                min-width: 35%;
+                flex: 1 1 35%;
+                margin-bottom: 10px;
+            }
+            .col2 {
+                flex: 1 1 45%;
+                min-width: 45%;
+                margin-bottom: 10px;
+            }
+            .col3 {
+                flex: 1 1 20%;
+                min-width: 20%; 
+                margin-bottom: 10px;
             }
             .list-number-container {
                 display: flex;
@@ -92,56 +113,176 @@
             <span class="highlighted">!=</span>.
         </p>
         <div class="highlight">
-            <div>
-                <h3>Test</h3>
-                <code>
-                    <span>console.log( <span class="highlighted">5 <span class="unset-highlighted">*</span> 2<span class="unset-highlighted"> ? </span>12</span>);</span>
-                    <span>console.log( <span class="highlighted">55 ? 22</span>)</span>
-                    <span>console.log( <span class="highlighted">16 <span class="unset-highlighted">/</span> 4 <span class="unset-highlighted"> ? </span>4</span>);</span>
-                    <span>console.log( <span class="highlighted">8 <span class="unset-highlighted">+</span> 2<span class="unset-highlighted"> ? </span>128)</span>;</span>
-                    <span>console.log( <span class="highlighted">32 <span class="unset-highlighted">*</span> 8<span class="unset-highlighted"> ? </span>255</span>);</span>
-                </code>
-            </div>
-            <div>
-                <h3>Lösning</h3>
-                <code>
-                    <span>console.log( <span class="highlighted">5 <span class="unset-highlighted">*</span> 2<span class="unset-highlighted"> <= </span>12</span>);</span>
-                    <span>console.log( <span class="highlighted">55 > 22</span>)</span>
-                    <span>console.log( <span class="highlighted">16 <span class="unset-highlighted">/</span> 4 <span class="unset-highlighted"> == </span>4</span>);</span>
-                    <span>console.log( <span class="highlighted">8 <span class="unset-highlighted">+</span> 2<span class="unset-highlighted"> < </span>128)</span>;</span>
-                    <span>console.log( <span class="highlighted">32 <span class="unset-highlighted">*</span> 8<span class="unset-highlighted"> != </span>255</span>);</span>
-                </code>
-            </div>
-            <div>
-                <h3>Konsolsvar</h3>
-                <code class="highlighted-true" id="task1"></code>
-            </div>
+            <ul class="row">
+                <li class="col1">
+                    <h3>Test</h3>
+                </li>
+                <li class="col2">
+                    <h3>Lösning</h3>
+                </li>
+                <li class="col3">
+                    <h3>Konsolsvar</h3>
+                </li>
+                <li class="col1">
+                    <div class="list-number-container">
+                        <div class="list-number">1.</div> 
+                        <span>console.log( <span class="highlighted">5 <span class="unset-highlighted">*</span> 2<span class="unset-highlighted"> ? </span>12</span>);</span>
+                    </div>
+                </li>
+                <li class="col2">
+                    <div>
+                        <code>
+                            <span>console.log( <span class="highlighted">5 <span class="unset-highlighted">*</span> 2<span class="unset-highlighted"> <= </span>12</span>);</span>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <code class="highlighted-true" id="task1.1"></code>
+                </li>
+                <li class="col1">
+                    <div class="list-number-container">
+                        <div class="list-number">2.</div> 
+                        <span>console.log( <span class="highlighted">55 <span class="unset-highlighted">?</span> 22</span>)</span>   
+                    </div>
+                </li>
+                <li class="col2">
+                    <div>
+                        <code>
+                            <span>console.log( <span class="highlighted">55 <span class="unset-highlighted">></span> 22</span>)</span>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <code class="highlighted-true" id="task1.2"></code>
+                </li>
+                <li class="col1">
+                    <div class="list-number-container">
+                        <div class="list-number">3.</div> 
+                        <span>console.log( <span class="highlighted">16 <span class="unset-highlighted">/</span> 4 <span class="unset-highlighted"> ? </span>4</span>);</span>
+                    </div>
+                </li>
+                <li class="col2">
+                    <div>
+                        <code>
+                            <span>console.log( <span class="highlighted">16 <span class="unset-highlighted">/</span> 4 <span class="unset-highlighted"> == </span>4</span>);</span>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <code class="highlighted-true" id="task1.3"></code>
+                </li>
+                <li class="col1">
+                    <div class="list-number-container">
+                        <div class="list-number">4.</div> 
+                        <span>console.log( <span class="highlighted">8 <span class="unset-highlighted">+</span> 2<span class="unset-highlighted"> ? </span>128)</span>;</span>
+                    </div>
+                </li>
+                <li class="col2">
+                    <div>
+                        <code>
+                            <span>console.log( <span class="highlighted">8 <span class="unset-highlighted">+</span> 2<span class="unset-highlighted"> < </span>128)</span>;</span>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <code class="highlighted-true" id="task1.4"></code>
+                </li>
+                <li class="col1">
+                    <div class="list-number-container">
+                        <div class="list-number">5.</div> 
+                        <span>console.log( <span class="highlighted">32 <span class="unset-highlighted">*</span> 8<span class="unset-highlighted"> ? </span>255</span>);</span>
+                    </div>
+                </li>
+                <li class="col2">
+                    <div>
+                        <code>
+                            <span>console.log( <span class="highlighted">32 <span class="unset-highlighted">*</span> 8<span class="unset-highlighted"> != </span>255</span>);</span>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <code class="highlighted-true" id="task1.5"></code>
+                </li>
+            </ul>
         </div>
         <h2>Uppgift 2</h2>
         <p>Använd sträng-metoden .substring() för att skriva ut följande delar av dessa strängar:</p>
         <div class="highlight">
-            <div>
-                <h3>Test</h3>
-                <ol>
-                    <li>Skriv ut <span class="highlighted">"Tis"</span> av <span class="highlighted">"Tisdag"</span></li>
-                    <li>Skriv ut <span class="highlighted">burgare"</span>" av <span class="highlighted">"Hamburgare"</span></li>
-                    <li>Skriv ut <span class="highlighted">"be back"</span> av <span class="highlighted">"I'll be back"</span></li>
-                </ol>
-            </div>
-            <div>
-                <h3>Lösning</h3>
-                <code>
-                    <span>const tuesday = "Tisdag"; console.log( <span class="highlighted">tuesday.substring(0, 3)</span>);</span>
-                    <span>const hamburger = "Hamburgare; console.log( <span class="highlighted">hamburger.substring(3)</span>);</span>
-                    <span>const beBack = "I'll be back"; console.log( <span class="highlighted">beBack.substring(5)</span>);</span>
-                </code>
-            </div>
-            <div>
-                <h3>Konsolsvar</h3>
-                <code>
-                    <code id="task2"></code>
-                </code>
-            </div>
+            <ul class="row">
+                <li class="col1"><h3>Test</h3></li>
+                <li class="col2"><h3>Lösning</h3></li>
+                <li class="col3"><h3>Konsolsvar</h3></li>
+                <li class="col1">
+                    <div class="list-number-container">
+                        <div class="list-number">1.</div> 
+                        <div>
+                            Skriv ut <span class="highlighted">"Tis"</span> av <span class="highlighted">"Tisdag"</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="col2">
+                    <div>
+                        <code>
+                            <span>const tuesday = "Tisdag";</span>
+                            <span> console.log( 
+                                <span class="highlighted">tuesday.substring(0, 3)</span>
+                                );
+                            </span>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <code id="task2.1"></code>
+                </li>
+                <li class="col1">
+                    <div class="list-number-container">
+                        <div class="list-number">2.</div> 
+                        <div>
+                            Skriv ut <span class="highlighted">burgare"</span>" av <span class="highlighted">"Hamburgare"</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="col2">
+                    <div>
+                        <code>
+                            <code>
+                                <span>const hamburger = "Hamburgare;</span>
+                                <span>console.log( 
+                                    <span class="highlighted">hamburger.substring(3)</span>
+                                    );
+                                </span>
+                            </code>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <code id="task2.2"></code>
+                </li>
+                <li class="col1">
+                    <div class="list-number-container">
+                        <div class="list-number">3.</div> 
+                       <div>
+                            Skriv ut <span class="highlighted">"be back"</span> av <span class="highlighted">"I'll be back"</span>
+                       </div>
+                    </div>
+                </li>
+                <li class="col2">
+                    <div>
+                        <code>
+                            <code>
+                                <span>const beBack = "I'll be back";</span>
+                                <span> console.log( 
+                                    <span class="highlighted">beBack.substring(5)</span>
+                                    );
+                                </span>
+                            </code>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <code id="task2.3"></code>
+                </li>
+            </ul>
         </div>
         <h2>Uppgift 3</h2>
         <p>Kombinera sträng-metoderna 
@@ -151,30 +292,64 @@
             för att skriva ut följande delar av dessa strängar:
         </p>
         <div class="highlight">
-            <div>
-                <h3>Test</h3>
-                <ol>
-                    <li>Skriv ut <span class="highlighted">"LEARNING"</span> 
-                        av <span class="highlighted">"It's Learning"</span></li>
-                    <li>Skriv ut <span class="highlighted">"good parts"</span> 
-                        av <span class="highlighted">"JavaScript: The Good Parts"</span></li>
-                </ol>
-            </div>
-            <div>
-                <h3>Lösning</h3>
-                <code>
-                    <span>const learning =  <span class="highlighted">"It's Learning".substring(5).toUpperCase(); console.log(learning)</span>);</span>
-                    <span>const goodParts = <span class="highlighted">"JavaScript: The Good Parts".substring(16).toLowerCase(); console.log(goodParts)</span>);</span>
-                </code>
-            </div>
-            <div>
-                <h3>Konsolsvar</h3>
-                <code>
-                    <code id="task3"></code>
-                </code>
-            </div>
+            <ul class="row">
+                <li class="col1">
+                    <h3>Test</h3>
+                </li>
+                <li class="col2">
+                    <h3>Lösning</h3>
+                </li>
+                <li class="col3">
+                    <h3>Konsolsvar</h3>
+                </li>
+                <li class="col1">
+                    <div class="list-number-container">
+                        <div class="list-number">1.</div> 
+                        <div>
+                            Skriv ut <span class="highlighted">"LEARNING"</span> 
+                        av <span class="highlighted">"It's Learning"</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="col2">
+                    <div>
+                        <code>
+                            <span>const learning =  
+                                <span class="highlighted">"It's Learning".substring(5).toUpperCase()</span>;
+                                <span> console.log(
+                                    <span class="highlighted">learning</span>
+                                );</span>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <code id="task3.1"></code>
+                </li>
+                <li class="col1">
+                    <div class="list-number-container">
+                        <div class="list-number">2.</div> 
+                        <div>
+                            Skriv ut <span class="highlighted">"good parts"</span> 
+                        av <span class="highlighted">"JavaScript: The Good Parts"</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="col2">
+                    <div>
+                        <code>
+                            <span>const goodParts = 
+                                <span class="highlighted">"JavaScript: The Good Parts".substring(16).toLowerCase()</span>;
+                                <span>console.log(
+                                    <span class="highlighted">goodParts)</span>
+                                    );</span>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <code id="task3.2"></code>
+                </li>
+            </ul>
         </div>
-
         <h2>Uppgift 4</h2>
         <p>I uppgift 4 ska ni utgå från följande array:
             var numbers = [
@@ -186,33 +361,49 @@
         </p>
         <div class="highlight">
             <ul class="row">
-                <li class="li-40"><h3>Test</h3></li>
-                <li class="li-40"><h3>Lösning</h3></li>
-                <li class="li-20"><h3>Konsolsvar</h3></li>
-                <li  class="li-40">
+                <li class="col1">
+                    <h3>Test</h3>
+                </li>
+                <li class="col2">
+                    <h3>Lösning</h3>
+                </li>
+                <li class="col3">
+                    <h3>Konsolsvar</h3>
+                </li>
+                <li class="col1">
                     <div class="list-number-container">
                         <div class="list-number">1.</div> 
                         <div>
                             Skapa en variabel med namnet 
                             <span class="highlighted">sumOfNumbers</span> 
-                            vars värde är summan av alla siffrorna i arrayen <span class="highlighted">numbers</span>
+                            vars värde är summan av alla siffrorna i arrayen 
+                            <span class="highlighted">numbers</span>
                             , skriv även ut denna i konsollen
                         </div>
                     </div>
                 </li>
-                <li class="li-40">
+                <li class="col2">
                     <div>
-                        const learning = 
-                        <code class="highlighted">
-                            "It's Learning".substring(5).toUpperCase(); console.log(learning)
+                        <code>
+                            <span>var numbers = [<span class="highlighted">128, 256, 512, 1024, 2048</span>];</span>
+                            <span>let sumOfNumbers = 0;</span>
+                            <span>
+                                numbers.forEach( num => {
+                                    <span class="highlighted">sumOfNumbers += num;</span>
+                                })
+                            </span>
+                            <span>
+                                console.log(
+                                <span class="highlighted">sumOfNumbers</span>
+                                );
+                            </span>
                         </code>
-                        );
                     </div>
                 </li>
-                <li  class="li-20">
+                <li class="col3">
                     <code id="task4.1"></code>
                 </li>
-                <li  class="li-40">
+                <li class="col1">
                     <div class="list-number-container">
                         <div class="list-number">2.</div> 
                         <div>
@@ -220,34 +411,31 @@
                             <span class="highlighted">avgNumber</span> 
                             vars värde är medelvärdet av alla siffrorna i krrayen 
                             <span class="highlighted">numbers</span> 
-                            (detta görs genom <span class="highlighted">summan / antal</span>). 
+                            (detta görs genom 
+                            <span class="highlighted">summan / antal</span>). 
                             Tänk på att medelvärdet ska kunna räknas ut även om vi själva lägger 
                             till eller tar bort ett par siffror, dvs. är det inte tillåtet att skriva 
-                            <span class="highlighted">summan / 5 </span>(för att vi har fem siffror). 
-                            Skriv även ut medelvärdet i konsollen
+                            <span class="highlighted">summan / 5 </span>
+                            (för att vi har fem siffror). Skriv även ut medelvärdet i konsollen
                         </div>
                     </div>
                 </li>
-                <li class="li-40">
+                <li class="col2">
                     <div>
-                        const learning = 
-                        <code class="highlighted">
-                            "It's Learning".substring(5).toUpperCase(); console.log(learning)
-                        </code>
-                        );
-                        const goodParts = 
                         <code>
-                            <span class="highlighted">
-                                "JavaScript: The Good Parts".substring(16).toLowerCase(); console.log(goodParts)
+                            <span>const avgNumber = sumOfNumbers / numbers.length;</span>
+                            <span>
+                                console.log(
+                                <span class="highlighted">avgNumber</span>
+                                );
                             </span>
                         </code>
-                        );
                     </div>
                 </li>
-                <li  class="li-20">
+                <li class="col3">
                     <code id="task4.2"></code>
                 </li>
-                <li  class="li-40">
+                <li class="col1">
                     <div class="list-number-container">
                         <div class="list-number">3.</div> 
                         <div>
@@ -257,74 +445,147 @@
                         </div>
                     </div>
                 </li>
-                <li class="li-40">
+                <li class="col2">
                     <div>
-                        const goodParts = 
-                        <code class="highlighted">
-                            "JavaScript: The Good Parts".substring(16).toLowerCase(); console.log(goodParts)
+                        <code>
+                            <span class="highlighted">numbers.push(sumOfNumbers)</span>;
+                            <span>console.log(
+                                <span class="highlighted">numbers</span>
+                                );
+                            </span>
                         </code>
-                        );
                     </div>
                 </li>
-                <li  class="li-20">
+                <li class="col3">
                     <code id="task4.3"></code>
                 </li>
             </ul>
-            <!-- <ol class="row">
-                <li>
-                    <div>
-                        Skapa en variabel med namnet 
-                    <span class="highlighted">sumOfNumbers</span> 
-                    vars värde är summan av alla siffrorna i arrayen <span class="highlighted">numbers</span>
-                    , skriv även ut denna i konsollen
+        </div>
+        <h2>Uppgift 5</h2>
+        <p>I uppgift 5 ska ni utgå från följande array:
+            var countries = [
+            <span class="highlighted">Sweden</span>, 
+            <span class="highlighted">Denmark</span>, 
+            <span class="highlighted">Finland</span>, 
+            <span class="highlighted">Norway</span>];
+        </p>
+        <div class="highlight">
+            <ul class="row">
+                <li class="col1">
+                    <h3>Test</h3>
+                </li>
+                <li class="col2">
+                    <h3>Lösning</h3>
+                </li>
+                <li class="col3">
+                    <h3>Konsolsvar</h3>
+                </li>
+                <li class="col1">
+                    <div class="list-number-container">
+                        <div class="list-number">1.</div> 
+                        <div>
+                            Skriv ut de tre första bokstäverna av det andra elementet i konsollen
+                        </div>
                     </div>
                 </li>
-                <li>
-                    <code>
-                        <span>const learning =  
-                            <span class="highlighted">"It's Learning".substring(5).toUpperCase(); console.log(learning)</span>);
-                        </span>
-                    </code>
+                <li class="col2">
+                    <div>
+                        <code>
+                            <span>
+                                console.log(
+                                <span class="highlighted">countries[1].substring(0, 3)</span>
+                                );
+                            </span>
+                        </code>
+                    </div>
                 </li>
-                <li>
-                    <code id="task4.1"></code>
+                <li class="col3">
+                    <code id="task5.1"></code>
                 </li>
-                <li> 
-                    2. Skapa en variabel med namnet 
-                    <span class="highlighted">avgNumber</span> 
-                    vars värde är medelvärdet av alla siffrorna i krrayen 
-                    <span class="highlighted">numbers</span> 
-                    (detta görs genom <span class="highlighted">summan / antal</span>). 
-                    Tänk på att medelvärdet ska kunna räknas ut även om vi själva lägger 
-                    till eller tar bort ett par siffror, dvs. är det inte tillåtet att skriva 
-                    <span class="highlighted">summan / 5 </span>(för att vi har fem siffror). 
-                    Skriv även ut medelvärdet i konsollen
+                <li class="col1">
+                    <div class="list-number-container">
+                        <div class="list-number">2.</div> 
+                        <div>
+                            Räkna ut och skriv ut medelvärdet för antal bokstäver för alla element i konsollen
+                        </div>
+                    </div>
                 </li>
-                <li>
-                    <code>
-                        <span>const goodParts = <span class="highlighted">"JavaScript: The Good Parts".substring(16).toLowerCase(); console.log(goodParts)</span>);</span>
-                    </code>
+                <li class="col2">
+                    <div>
+                        <code>
+                            <span>var amountOfcountries = 
+                                <span class="highlighted">countries.length</span>;
+                            </span>
+                            <span>var amountOfcountryLetters = "";</span>
+                            <span>countries.forEach( countryLetters => {</span>
+                                <span class="highlighted">amountOfcountryLetters += countryLetters;</span>
+                            <span>})</span>
+                            <span>
+                                console.log(
+                                <span class="highlighted">amountOfcountryLetters.length / amountOfcountries</span>
+                                );
+                            </span>
+                        </code>
+                    </div>
                 </li>
-                <li>
-                    <code id="task4.2">
-                        
-                    </code>
-                <li>
-                    3. Lägg till ett element (siffra) i slutet av arrayen vars värde är summan av alla 
-                    siffror (tips nyttja variabeln ni tidigare skapade), 
-                    skriv även ut den nya arrayen i konsollen
+                <li class="col3">
+                    <code id="task5.2"></code>
                 </li>
-                <li>
-                    <code>
-                        <span>const goodParts = <span class="highlighted">"JavaScript: The Good Parts".substring(16).toLowerCase(); console.log(goodParts)</span>);</span>
-                    </code>
+            </ul>
+        </div>
+        <h2>Uppgift 6</h2>
+        <p>I uppgift 6 ska ni utgå från följande array:
+            var values = [
+            <span class="highlighted">3</span>, 
+            <span class="highlighted">5</span>, 
+            <span class="highlighted">"Jane"</span>, 
+            <span class="highlighted">true</span>,
+            <span class="highlighted">144</span>, 
+            <span class="highlighted">false</span>];
+        </p>
+        <div class="highlight">
+            <ul class="row">
+                <li class="col1">
+                    <h3>Test</h3>
                 </li>
-                <li>
-                    <code id="task4.3">
-                        
-                    </code>
-                </li> -->
-            </ol> 
+                <li class="col2">
+                    <h3>Lösning</h3>
+                </li>
+                <li class="col3">
+                    <h3>Konsolsvar</h3>
+                </li>
+                <li class="col1">
+                    <div class="list-number-container">
+                        <div class="list-number">1.</div> 
+                        <div>
+                            Ta reda på hur ni kan få innehållet av arrayen values att hamna i 
+                            motsats ordning (baklänges) och skriv sedan ut detta i konsollen.
+                        </div>
+                    </div>
+                </li>
+                <li class="col2">
+                    <div>
+                        <code>
+                            <span>var reversedOrder = 
+                                <span class="highlighted">values.reverse()
+                                </span>
+                                ;
+                            </span>
+                            <span>let reversedValues = "";</span>
+                            <span>reversedOrder.forEach( value => {</span>
+                                <span class="highlighted">reversedValues += value + ", ";</span>
+                                <span>})</span>
+                            <span>console.log(
+                                <span class="highlighted">reversedValues</span>
+                                );
+                            </span>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <code id="task6.1"></code>
+                </li>
+            </ul>
         </div>
         <script src="customLogMain.js"></script>
     </body>

@@ -45,17 +45,12 @@ numbers.forEach( num => {
 })
 
 console.log("Uppgift 4.1: ", sumOfNumbers);
+
 const avgNumber = sumOfNumbers / numbers.length;
 console.log("Uppgift 4.2: ", avgNumber);
 
-var numbers2 = [128, 256, 512, 1024, 2048, 32];
-sumOfNumbers = 0;
-
-numbers2.forEach( num => {
-    sumOfNumbers += num;
-})
-
-console.log("Uppgift 4.3: ", sumOfNumbers);
+numbers.push(sumOfNumbers);
+console.log("Uppgift 4.3: ", numbers);
 
 /**
  * Uppgift 5
@@ -68,9 +63,9 @@ console.log("Uppgift 5.1 ", countries[1].substring(0, 3));
 
 var amountOfcountries = countries.length;
 var amountOfcountryLetters = "";
-countries.forEach( letters => {
-    amountOfcountryLetters += letters;
-})
+countries.forEach( countryLetters => {
+    amountOfcountryLetters += countryLetters;
+});
 console.log("Uppgift 5.2: ", amountOfcountryLetters.length / amountOfcountries);
 
 /**
