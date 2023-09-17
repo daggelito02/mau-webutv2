@@ -74,14 +74,8 @@ console.log("Uppgift 5.2: ", amountOfcountryLetters.length / amountOfcountries);
  */
 
 var values = [3, 5, "Jane", true, 144, false];
-
 var reversedOrder = values.reverse();
-let reversedValues = "";
-reversedOrder.forEach( value => {
-    reversedValues += value + ", ";
-})
-
-console.log("Uppgift 6:", reversedValues);
+console.log("Uppgift 6:", reversedOrder);
 
 /**
  * Uppgift 7

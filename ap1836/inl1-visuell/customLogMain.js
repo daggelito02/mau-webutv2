@@ -62,13 +62,13 @@ numbers.forEach( num => {
     sumOfNumbers += num;
 })
 
-customLogTask4_1(sumOfNumbers); //Uppgift 4.1
+customLogTask4_1(sumOfNumbers); 
 
 const avgNumber = sumOfNumbers / numbers.length;
-customLogTask4_2(avgNumber); //Uppgift 4.2
+customLogTask4_2(avgNumber); 
 
 numbers.push(sumOfNumbers);
-customLogTask4_3(numbers); //Uppgift 4.3
+customLogTask4_3(numbers); 
 
 /**
  * Uppgift 5
@@ -78,14 +78,14 @@ var customLogTask5_1 = (...e) => {for(var i=0;i<e.length;i++){document.getElemen
 var customLogTask5_2 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task5.2").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
 
 var countries = ["Sweden", "Denmark", "Finland", "Norway"];
-customLogTask5_1(countries[1].substring(0, 3)); //Uppgift 5.1
+customLogTask5_1(countries[1].substring(0, 3)); 
 
 var amountOfcountries = countries.length;
 var amountOfcountryLetters = "";
 countries.forEach( countryLetters => {
     amountOfcountryLetters += countryLetters;
 });
-customLogTask5_2(amountOfcountryLetters.length / amountOfcountries); //Uppgift 5.2
+customLogTask5_2(amountOfcountryLetters.length / amountOfcountries); 
 
 /**
  * Uppgift 6
@@ -94,11 +94,78 @@ customLogTask5_2(amountOfcountryLetters.length / amountOfcountries); //Uppgift 5
 var customLogTask6_1 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task6.1").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
 
 var values = [3, 5, "Jane", true, 144, false];
+const reversedOrder = values.reverse();
+customLogTask6_1(reversedOrder); 
 
-var reversedOrder = values.reverse();
-let reversedValues = "";
-reversedOrder.forEach( value => {
-    reversedValues += value + ", ";
-})
+/**
+ * Uppgift 7
+ * =========
+ */
+var customLogTask7_1 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task7.1").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
 
-customLogTask6_1(reversedValues);
+var names = ["Jane", "Joe", "Eliza"];
+var ages = [21, 34, 22];
+var hasPet = [true, false, true];
+var multipleArrays = [].concat(names, ages, hasPet);
+customLogTask7_1(multipleArrays); 
+
+/**
+ * Uppgift 8
+ * =========
+ */
+var customLogTask8_1 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task8.1").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
+
+var actors = ["Sherlock", "Watson", "Bo"];
+
+customLogTask8_1(actors.join(' - ')); 
+
+/**
+ * Uppgift 9
+ * =========
+ */
+var customLogTask9_1 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task9.1").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
+var customLogTask9_2 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task9.2").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
+var customLogTask9_3 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task9.3").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
+
+var amount = 49; // Less then 50!
+
+if (amount < 50) {
+    customLogTask9_1("Less then 50!")
+} else if (amount >= 50 && amount < 65) {
+    customLogTask9_1("Optimal range for the amount!") 
+} else {
+    customLogTask9_1("Too much!")
+}
+
+var amount = "50"; // Optimal range for the amount!
+
+if (amount < 50) {
+    customLogTask9_2("Less then 50!")
+} else if (amount >= 50 && amount < 65) {
+    customLogTask9_2("Optimal range for the amount!") 
+} else {
+    customLogTask9_2("Too much!")
+}
+
+var amount = "65"; // Too much!
+
+if (amount < 50) {
+    customLogTask9_3("Less then 50!")
+} else if (amount >= 50 && amount < 65) {
+    customLogTask9_3("Optimal range for the amount!") 
+} else {
+    customLogTask9_3("Too much!")
+}
+
+/**
+ * Uppgift 10
+ * =========
+ */
+var customLogTask10_1 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task10.1").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
+
+const hash = '#';
+let str = '';
+for (let i = 0; i < 8; i++) {
+    var increasesTheHash = (str += hash);
+    customLogTask10_1(increasesTheHash + "<br>");
+}

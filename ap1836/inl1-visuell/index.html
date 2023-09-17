@@ -31,7 +31,6 @@
                 padding: 1px 3px;
                 display: inline;
                 word-wrap: break-word;
-                /* word-break: break-all; */
             }
             .unset-highlighted {
                 background-color: rgb(237, 237, 237);
@@ -53,24 +52,6 @@
                 display: flex;
                 width: 100%;
                 flex-wrap: wrap;
-            }
-            /* .row li {
-                //flex: 1 1 33.1%;
-            } */
-            .p-r {
-                padding-right: 1rem;
-            }
-            .li-20 {
-                min-width: 20%;
-            }
-            .li-30 {
-                flex: 1 1 30%;
-            }
-            .li-40 {
-                flex: 1 1 40%;
-            }
-            .li-50 {
-                flex: 1 1 50%;
             }
             .col1 {
                 min-width: 35%;
@@ -518,7 +499,7 @@
                             </span>
                             <span>var amountOfcountryLetters = "";</span>
                             <span>countries.forEach( countryLetters => {</span>
-                                <span class="highlighted">amountOfcountryLetters += countryLetters;</span>
+                                <span class="highlighted">&nbsp;&nbsp;amountOfcountryLetters += countryLetters;</span>
                             <span>})</span>
                             <span>
                                 console.log(
@@ -573,7 +554,7 @@
                             </span>
                             <span>let reversedValues = "";</span>
                             <span>reversedOrder.forEach( value => {</span>
-                                <span class="highlighted">reversedValues += value + ", ";</span>
+                                <span class="highlighted">&nbsp;&nbsp;reversedValues += value + ", ";</span>
                                 <span>})</span>
                             <span>console.log(
                                 <span class="highlighted">reversedValues</span>
@@ -583,7 +564,263 @@
                     </div>
                 </li>
                 <li class="col3">
-                    <code id="task6.1"></code>
+                    <code id="task6.1" style="word-break: break-all;"></code>
+                </li>
+            </ul>
+        </div>
+        <h2>Uppgift 7</h2>
+        <p>I uppgift 7 ska ni slå ihop tre stycken arrayer till en egen array, utgå från följande arrayer:
+            <br/>var names = [
+            <span class="highlighted">Jane</span>, 
+            <span class="highlighted">Joe</span>, 
+            <span class="highlighted">Eliza</span>;
+            <br/>var ages = [
+            <span class="highlighted">21</span>, 
+            <span class="highlighted">34</span>, 
+            <span class="highlighted">22</span>;
+            <br/>var hasPet = [
+            <span class="highlighted">true</span>, 
+            <span class="highlighted">false</span>, 
+            <span class="highlighted">true</span>;
+        </p>
+        <div class="highlight">
+            <ul class="row">
+                <li class="col1">
+                    <h3>Test</h3>
+                </li>
+                <li class="col2">
+                    <h3>Lösning</h3>
+                </li>
+                <li class="col3">
+                    <h3>Konsolsvar</h3>
+                </li>
+                <li class="col1">
+                    <div class="list-number-container">
+                        <div class="list-number">1.</div> 
+                        <div>
+                            Spara den nya arrayen i variabeln multipleArrays.
+                        </div>
+                    </div>
+                </li>
+                <li class="col2">
+                    <div>
+                        <code>
+                            var multipleArrays = <span class="highlighted">[].concat(names, ages, hasPet)</span>;
+                            <span>console.log(
+                                <span class="highlighted">multipleArrays</span>
+                                );
+                            </span>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <code id="task7.1" style="word-break: break-all;"></code>
+                </li>
+            </ul>
+        </div>
+        <h2>Uppgift 8</h2>
+        <p>I uppgift 8 ska ni ta reda på hur ni kan slå ihop alla element av en array till 
+            en sträng, dvs. array till text (sträng). Ni ska utgå från följande array:
+            var actors = [
+            <span class="highlighted">Sherlock</span>, 
+            <span class="highlighted">Watson</span>, 
+            <span class="highlighted">Bo</span>];
+        </p>
+        <div class="highlight">
+            <ul class="row">
+                <li class="col1">
+                    <h3>Test</h3>
+                </li>
+                <li class="col2">
+                    <h3>Lösning</h3>
+                </li>
+                <li class="col3">
+                    <h3>Konsolsvar</h3>
+                </li>
+                <li class="col1">
+                    <div class="list-number-container">
+                        <div class="list-number">1.</div> 
+                        <div>
+                            Med denna array ska ni skriva ut resultatet konsollen i formatet: 
+                            <span class="highlighted">
+                                "Sherlock - Watson - Bo"
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="col2">
+                    <div>
+                        <code>
+                            <span>console.log(
+                                <span class="highlighted">actors.join(' - ')</span>
+                                );
+                            </span>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <code id="task8.1"></code>
+                </li>
+            </ul>
+        </div>
+        <h2>Uppgift 9</h2>
+        <p>
+            I uppgift 9 ska ni använda er av en <span class="highlighted">if</span>-sats som styr vilken utskrift det blir i konsollen 
+            givet värdet på en variabel. Denna <span class="highlighted">if</span>-sats ska innehålla tre delar och utföra 
+            jämförelser mot en variabel med namnet <span class="highlighted">amount</span>.
+        </p>
+        <div class="highlight">
+            <ul class="row">
+                <li class="col1">
+                    <h3>Test</h3>
+                </li>
+                <li class="col2">
+                    <h3>Lösning</h3>
+                </li>
+                <li class="col3">
+                    <h3>Konsolsvar</h3>
+                </li>
+                <li class="col1">
+                    <div class="list-number-container">
+                        <div class="list-number">1.</div> 
+                        <div>
+                            Om variabeln <span class="highlighted">amount</span> är mindre än 
+                            <span class="highlighted">50</span> så ska ni skriva ut 
+                            <span class="highlighted">"Less then 50!"</span> i konsollen
+                        </div>
+                    </div>
+                </li>
+                <li class="col2">
+                    <div>
+                        <code>
+                            <span>var amount = <span class="highlighted">49</span>;</span>
+                            <span>if (amount < 50) {</span>
+                            <span>
+                                &nbsp;&nbsp;console.log(<span class="highlighted">"Less then 50!"</span>);
+                            </span>
+                            <span>} else if (amount >= 50 && amount < 65) {</span>
+                            <span>
+                                &nbsp;&nbsp;console.log(<span class="highlighted">"Optimal range for the amount!"</span>);
+                            </span>
+                            <span>} else {</span>
+                            <span>
+                                &nbsp;&nbsp;console.log(<span class="highlighted">"Too much!"</span>);
+                            </span>
+                            <span>}</span>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <code id="task9.1"></code>
+                </li>
+                <li class="col1">
+                    <div class="list-number-container">
+                        <div class="list-number">2.</div> 
+                        <div>
+                            Om variabeln <span class="highlighted">amount</span> är mer än eller lika med <span class="highlighted">50</span> och mindre än <span class="highlighted">65</span> så ska 
+                            ni skriva ut <span class="highlighted">"Optimal range for the amount!"</span> i konsollen
+                        </div>
+                    </div>
+                </li>
+                <li class="col2">
+                    <div>
+                        <code>
+                            <span>var amount = <span class="highlighted">50</span>;</span>
+                            <span>if (amount < 50) {</span>
+                            <span>
+                                &nbsp;&nbsp;console.log(<span class="highlighted">"Less then 50!"</span>);
+                            </span>
+                            <span>} else if (amount >= 50 && amount < 65) {</span>
+                            <span>
+                                &nbsp;&nbsp;console.log(<span class="highlighted">"Optimal range for the amount!"</span>);
+                            </span>
+                            <span>} else {</span>
+                            <span>
+                                &nbsp;&nbsp;console.log(<span class="highlighted">"Too much!"</span>);
+                            </span>
+                            <span>}</span>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <code id="task9.2"></code>
+                </li>
+                <li class="col1">
+                    <div class="list-number-container">
+                        <div class="list-number">3.</div> 
+                        <div>
+                            I alla andra fall så ska ni skriva ut <span class="highlighted">"Too much!"</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="col2">
+                    <div>
+                        <code>
+                            <span>var amount = <span class="highlighted">65</span>;</span>
+                            <span>if (amount < 50) {</span>
+                            <span>
+                                &nbsp;&nbsp;console.log(<span class="highlighted">"Less then 50!"</span>);
+                            </span>
+                            <span>} else if (amount >= 50 && amount < 65) {</span>
+                            <span>
+                                &nbsp;&nbsp;console.log(<span class="highlighted">"Optimal range for the amount!"</span>);
+                            </span>
+                            <span>} else {</span>
+                            <span>
+                                &nbsp;&nbsp;console.log(<span class="highlighted">"Too much!"</span>);
+                            </span>
+                            <span>}</span>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <code id="task9.3"></code>
+                </li>
+            </ul>
+        </div>
+        <h2>Uppgift 10</h2>
+        <p>
+            I uppgift 10 ska ni använda er av en <span class="highlighted">for</span>-loop för att slippa att manuellt använda er 
+            av <span class="highlighted">console.log()</span> för att göra flera utskrifter, som i detta fall annars hade varit 
+            väldigt repetitivt. Den utskrift ni ska uppnå med er <span class="highlighted">for</span>-loop är följande:
+        </p>
+        <div class="highlight">
+            <ul class="row">
+                <li class="col1">
+                    <h3>Test</h3>
+                </li>
+                <li class="col2">
+                    <h3>Lösning</h3>
+                </li>
+                <li class="col3">
+                    <h3>Konsolsvar</h3>
+                </li>
+                <li class="col1">
+                    <div class="list-number-container">
+                        <div class="list-number">1.</div> 
+                        <div>
+                            Exemplet här har 8 rader.
+                        </div>
+                    </div>
+                </li>
+                <li class="col2">
+                    <div>
+                        <code>
+                            <span>const hash = '#';</span>
+                            <span>let str = '';</span>
+                            <span>for (let i = 0; i < 8; i++) {</span>
+                            <span>
+                                <span class="highlighted">&nbsp;&nbsp;var increasesTheHash = (str += hash);</span>
+                            </span>
+                            <span>
+                                <span class="highlighted">&nbsp;&nbsp;customLogTask10_1(increasesTheHash + "&lt;br&gt;")</span>;
+                            </span>
+                            <span>}</span>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <code id="task10.1"></code>
                 </li>
             </ul>
         </div>
