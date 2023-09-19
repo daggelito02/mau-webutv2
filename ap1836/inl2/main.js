@@ -58,19 +58,52 @@ console.log('sumOfNumbers: ', sumOfNumbers);
  * Uppgift 4
  * =========
  */
+const countCharacter = function(characters = "", character = "") {
+    let amountNumberOfCharacter = 0;
+    for (var i = 0; i < characters.length; i++) {
+        if(characters[i] == character) {
+            amountNumberOfCharacter++;
+        }
+    }
+    return amountNumberOfCharacter;
+}
 
+var testString1 = "Jane Doe";
+var testString2 = "Abracadabra";
+var testString3 = "Don Giorno";
+
+console.log(countCharacter(testString1, "e")); // => 2
+console.log(countCharacter(testString2, "a")); // => 4 (obs. litet "a")
+console.log(countCharacter(testString3, "o")); 
 
 /**
  * Uppgift 5
  * =========
  */
+const palindrome = function(TextToTest = "") {
+    var reversedText = TextToTest.split('').reverse().join('')
+    if (reversedText == TextToTest) {
+        return true;
+    } else {
+        return false;
+    }
+}
+const palindrome2 = function(TextToTest = "") {
+    var reversedText = TextToTest.split('').reverse().join('')
+    if (reversedText == TextToTest) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
+console.log(palindrome("sirap - paris")); // skickar tillbaka "true"
+console.log(palindrome2("lorem ipsum")); // skickar tillbaka "false"
 
 /**
  * Uppgift 6
  * =========
  */
-
 
 /**
  * Uppgift 7
