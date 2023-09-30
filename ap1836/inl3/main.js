@@ -52,7 +52,50 @@ function removeListText() {
         listItems2.removeChild(listItems2.lastElementChild);
     }
 }
+
 /**
  * Uppgift 4
  * =========
  */
+// Hämta alla knappar
+var buttons = document.getElementsByClassName("remove-list-item");
+// Gå igenom alla knappar och lägg till ett klick-event
+for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function() {
+        const itemText = this.parentElement.innerText;
+        if (confirm("Do you really want to remove " + itemText.substring(12).slice(0,-1))) {
+            this.parentElement.remove();
+        }
+    });
+}
+
+/**
+ * Uppgift 5
+ * =========
+ */
+
+/**
+ * Uppgift 6
+ * =========
+ */
+
+/**
+ * Uppgift 7
+ * =========
+ */
+
+/**
+ * Uppgift 8
+ * =========
+ */
+
+/**
+ * Uppgift 9
+ * =========
+ */
+
+/**
+ * Uppgift 10
+ * =========
+ */
+
