@@ -129,8 +129,8 @@ form.addEventListener("submit", function(event) {
         validateFeedback = "At least one pet needs to be selected!";
     } 
     else {
-        // Ta bort commentaren
-        event.target.submit();
+        // Ta bort commentaren för del 2
+        //event.target.submit();
     }
 
     if(validateFeedback != "passed") {
