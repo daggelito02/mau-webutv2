@@ -4,51 +4,20 @@
         <title>Inlämningsuppgift 3</title>
         <link rel="icon" type="image/png" href="/ap1836/favicon.ico" />
         <meta charset="utf-8">
-        <style>
-            body {
-                margin: 2rem;
-            }
-            ul {
-                list-style-type: none; 
-                margin: 0 0 1rem;
-                padding: 0.5rem 1.5rem; 
-                border: #333 solid 1px; 
-                min-height: 4rem;
-            }
-            #items li {
-                list-style: disc;
-            }
-            ul#task4 li{
-                padding: 0.8rem 0 0.4rem
-            }
-            .divider {
-                margin-top: 1.3rem;
-                border-top: solid 1px #333;
-            }
-            #message-box {
-                border: 1px solid black;
-                padding: 15px;
-                font-size: 20px;
-                margin-bottom: 1rem;
-            }
-            .success {
-                background-color: #dff0d8;
-                border-color: #98B98B!important;
-            }
-            .error {
-                background-color: #f2dede;
-                border-color: #BE9090!important;
-            }
-            .info {
-                background-color: #d9edf7;
-                border-color: #7294A5!important;
-            }
-        </style>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <div id="totop"></div>
+        <nav>
+            <a href="#task1">[Uppgift 1]</a>
+            <a href="#task2">[Uppgift 2]</a>
+            <a href="#task3">[Uppgift 3]</a>
+            <a href="#task4">[Uppgift 4]</a>
+            <a href="#task5">[Uppgift 5]</a> 
+        </nav>
         <h1>Inlämningsuppgift 3</h1>
         <h2>Dag Fredriksson</h2>
-        <h3>Uppgift 1</h3>
+        <h3 id="task1">Uppgift 1 </h3><a href="#totop">[Till toppen]</a>
         <div id="message-box">
             <p>This is a very important message box!</p>
         </div>
@@ -58,7 +27,7 @@
         <button type="button" id="info">Info</button>
 
         <div class="divider"></div>
-        <h3>Uppgift 2</h3>
+        <h3 id="task2">Uppgift 2</h3><a href="#totop">[Till toppen]</a>
         <p>Add a new text item to the list</p>
         <ul id="items">
             <li>The first item is free!</li>
@@ -67,7 +36,7 @@
         <button type="button" id="add-item" data-list="items">Add item</button>
 
         <div class="divider"></div>
-        <h3>Uppgift 3</h3>
+        <h3 id="task3">Uppgift 3 </h3><a href="#totop">[Till toppen]</a>
 
         <p>Add a new text item to the list or remove a line</p>
         <ul id="items2">
@@ -78,9 +47,9 @@
         <button type="button" id="remove-item">Remove item</button>
 
         <div class="divider"></div>
-        <h3>Uppgift 4</h3>
+        <h3 id="task4">Uppgift 4</h3><a href="#totop">[Till toppen]</a>
 
-        <ul id="task4">
+        <ul id="list-task4">
             <li>
                 This is the first item
                 <button type="button" class="remove-list-item">X</button>
@@ -99,6 +68,25 @@
             </li>
         </ul>
 
+        <div class="divider"></div>
+        <h3 id="task5">Uppgift 5, del 1 (validera, se console.log) + 2 (validera formdata)</h3><a href="#totop">[Till toppen]</a>
+        <form action="" method="get" id="apply-for-pet">
+            <h3>Ansökan om att skaffa husdjur</h2>
+            <input type="text" name="firstname"> Förnamn<br>
+            <input type="text" name="lastname"> Efternamn<br>
+            <input type="text" name="age"> Ålder<br>
+            <input type="text" name="email"> Epost<br>
+        
+            <div id="pets">
+                <p>Typ av husdjur?</p>
+                <input type="radio" name="pet" value="dog"> Hund<br>
+                <input type="radio" name="pet" value="cat"> Katt<br>
+                <input type="radio" name="pet" value="fish"> Fisk<br>
+                <input type="radio" name="pet" value="bird"> Fågel<br>
+            </div>
+        
+            <button type="submit">Skicka ansökan</button>
+        </form>
         <!-- <p>Main.js för uppgiftens alla svar.</p> -->
         <script src="main.js"></script>
     </body>

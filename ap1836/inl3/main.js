@@ -70,32 +70,70 @@ for (var i = 0; i < buttons.length; i++) {
 }
 
 /**
- * Uppgift 5
+ * Uppgift 5, del 1 & del 2
  * =========
  */
+var form = document.getElementById("apply-for-pet");
 
-/**
- * Uppgift 6
- * =========
- */
+form.addEventListener("submit", function(event) {
 
-/**
- * Uppgift 7
- * =========
- */
+    /**
+     * Del 1 skriv ut formulärvärden i konsolen
+     * =========
+     */
+    event.preventDefault(); 
+    var formdata = [];
+    for ( var i = 0; i < this.elements.length -1; i++) { 
+        var e = this.elements[i];
+        if (e.name != "pet")  
+        {
+            formdata.push(e.name + " = " + e.value);
 
-/**
- * Uppgift 8
- * =========
- */
+        } else if (e.checked) {
+            formdata.push(e.name + " = " + e.value);
+        }
+    }
+    console.log(formdata.join("\n"));
 
-/**
- * Uppgift 9
- * =========
- */
+    /**
+     * Del 2 validera formulär
+     * =========
+     */
+    // Förnamn - får endast innehålla 0 till 50 bokstäver
+    // Efternamn - får endast innehålla 0 till 50 bokstäver
+    // Ålder - måste vara en siffra (number) och vara mer än 0
+    // Epost - får endast innehålla 0 till 50 bokstäver
+    // Husdjur - ett husdjur måste vara valt
+    let validateFeedback = "passed";
+    if (this.elements.firstname.value.length > 50 ) {
+        validateFeedback = "Firstname: \"" + this.elements.firstname.value + 
+        "\" can only contain 0 to 50 characters!";
+    } 
+    else if (this.elements.lastname.value.length > 50) {
+        validateFeedback = "Lastname: \"" + this.elements.lastname.value + 
+        "\" can only contain 0 to 50 characters!";
+    }
+    else if (isNaN(this.elements.age.value)) {
+        validateFeedback = "Age: \"" + this.elements.age.value + 
+        "\" must be a number!";
+    }
+    else if (this.elements.age.value == 0) {
+        validateFeedback = "Age: \"" + this.elements.age.value + 
+        "\" must greater than 0!";
+    } 
+    else if (this.elements.email.value.length > 50) {
+        validateFeedback = "Email: \"" + this.elements.email.value + 
+        "\" can only contain 0 to 50 characters!";
+    }
+    else if (this.elements.pet.value.length == 0) {
+        validateFeedback = "At least one pet needs to be selected!";
+    } 
+    else {
+        // Ta bort commentaren
+        event.target.submit();
+    }
 
-/**
- * Uppgift 10
- * =========
- */
-
+    if(validateFeedback != "passed") {
+        alert(validateFeedback);
+    }
+});
