@@ -4,12 +4,9 @@ body {
 ul {
     list-style-type: none; 
     margin: 0 0 1rem;
-    padding: 0.5rem 1.5rem; 
+    padding: 0.5rem .5rem; 
     border: #333 solid 1px; 
     min-height: 4rem;
-}
-#items li {
-    list-style: disc;
 }
 ul#list-task4 li{
     padding: 0.8rem 0 0.4rem

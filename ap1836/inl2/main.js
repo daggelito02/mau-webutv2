@@ -74,9 +74,6 @@ var testString1 = "Jane Doe";
 var testString2 = "Abracadabra";
 var testString3 = "Don Giorno";
 
-//console.log(countCharacter(testString1, "e")); // => 2
-//console.log(countCharacter(testString2, "a")); // => 4 (obs. litet "a")
-//console.log(countCharacter(testString3, "o")); 
 console.log('Uppgift 4.1: countCharacter(Jane Doe, "e") =', countCharacter("Jane Doe", "e")); // => 2
 console.log('Uppgift 4.2: countCharacter(Abracadabra, "a") =', countCharacter("Abracadabra", "a")); // => 4 (obs. litet "a")
 console.log('Uppgift 4.3: countCharacter(Don Giorno, "o") =', countCharacter("Don Giorno", "o")); // => 3

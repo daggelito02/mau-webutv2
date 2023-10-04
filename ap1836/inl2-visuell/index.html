@@ -1,0 +1,578 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Inlämningsuppgift 2</title>
+        <link rel="icon" type="image/png" href="/ap1836/favicon.ico" />
+        <meta charset="utf-8">
+        <style>
+            body {
+               margin: 2rem;
+            }
+            ul{
+                list-style-type: none; 
+                padding: 0; 
+                margin: 0; 
+            }
+            ul.disc{
+                list-style-type: disc;
+                margin: 1rem; 
+                margin-bottom: -1rem;
+            }
+            ul.disc li{
+                padding-bottom: 1rem;
+            }
+            h3 {
+                margin: 0.5rem 0;
+            }
+            .highlight {
+                overflow-x: auto;
+                background-color: rgb(237, 237, 237);
+                line-height: 1.45em;
+                padding: 16px 20px;
+                margin: 24px 0px;
+                border-radius: 1px;
+                display: flex;
+            }
+            .highlight div {
+                margin-right: 32px;
+            } 
+            .highlighted {
+                background-color: rgb(237, 237, 237);
+                color: #d63200;
+                padding: 1px 3px;
+                display: inline;
+                word-wrap: break-word;
+            }
+            .unset-highlighted {
+                background-color: rgb(237, 237, 237);
+                color: #000;
+                padding: 1px 3px;
+                display: inline;
+            }
+            .highlighted-true {
+                color: blue;
+            }
+            code {
+                font-size: 1rem;
+                font-family: "Roboto Mono", monospace;
+            }
+            code span {
+                display: block;
+            }
+            .row {
+                display: flex;
+                width: 100%;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+            .col1 {
+                /* min-width: 35%;
+                flex: 1 1 35%;
+                margin-bottom: 10px; */
+            }
+            .col2 {
+                /* flex: 1 1 45%;
+                min-width: 45%;
+                margin-bottom: 10px; */
+            }
+            .col3 {
+                /* flex: 1 1 20%;*/
+                min-width: 15%; 
+               /* margin-bottom: 10px; */
+            }
+            /* .list-number-container {
+                display: flex;
+            } */
+            /* .list-number-container .list-number {
+                margin-right: .2rem;
+            } */
+            pre {
+                text-wrap: pretty;
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="/ap1836/">Länksida</a></li>
+                <li><a href="/ap1836/inl2/index.html">Enkel HTML-fil för inlämningsuppgift 2</a></li>
+            </ul>
+        </nav>
+        <h1>Inlämningsuppgift 2</h1>
+        <h2>Uppgift 1</h2>
+        <p>
+            Skapa funktionerna <span class="highlighted">max</span> och <span class="highlighted">min</span> 
+            som returnerar det högsta respektive lägsta värdet av två parametrar.
+            <br>
+            Det är inte tillåtet att använda sig av <span class="highlighted">Math.max</span> och <span class="highlighted">Math.min.</span> Ta en titt på kodexemplet nedan för att 
+            få mer information om användningen av dessa funktioner:
+        </p>
+        <div class="highlight">
+            <ul class="row">
+                <li class="col1">
+                    <h3>Test</h3>
+                    <div>1.
+                        <span>
+                            max(<span class="highlighted">5</span>, <span class="highlighted">10</span>)
+                        </span>
+                    </div> 
+                    <br>
+                    <div>2.
+                        <span>
+                            max(<span class="highlighted">7</span>, <span class="highlighted">7</span>)
+                        </span>
+                    </div> 
+                    <br>
+                    <div>3.
+                        <span>
+                            min(<span class="highlighted">12</span>, <span class="highlighted">24</span>)
+                        </span>
+                    </div> 
+                    <br>
+                    <div>4.
+                        <span>
+                            min(<span class="highlighted">30</span>, <span class="highlighted">18</span>)
+                        </span>
+                    </div>
+                </li>
+                <li class="col2">
+                    <h3>Lösning</h3>
+                    <div>
+                        <code>
+                            <pre>
+const max = function(<span class="highlighted">number1 = 0, number2 = 0</span>) {
+    let result = number2;
+    if (<span class="highlighted">number1 >= number2</span>) {
+        result = number1;
+    }
+    return result;
+};
+const min = function(<span class="highlighted">number1 = 0, number2 = 0</span>) {
+    let result = number2;
+    if (<span class="highlighted">number1 <= number2</span>) {
+        result = number1;
+    } 
+    return result;
+};
+                            </pre>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <h3>Konsolsvar</h3>
+                    <div>
+                        <code class="highlighted-true" id="task1.1"></code>
+                    </div>
+                    <br>
+                    <div>
+                        <code class="highlighted-true" id="task1.2"></code>
+                    </div>
+                    <br>
+                    <div>
+                        <code class="highlighted-true" id="task1.3"></code>
+                    </div>
+                    <br>
+                    <div>
+                      <code class="highlighted-true" id="task1.4"></code>  
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2>Uppgift 2</h2>
+        <p>
+            Skapa funktionen <span class="highlighted">range</span> som returnerar en array innehållande siffrorna 
+            <span class="highlighted">0</span> till 
+            <span class="highlighted">n</span> där n är den parameter som 
+            skickades med, det vill säga att anropet <span class="highlighted">range(5);</span> hade gett oss arrayen 
+            <span class="highlighted"></span><span class="highlighted">[0, 1, 2, 3, 4]</span>. 
+            För att pröva er kod kan ni testa kodexemplet nedan när ni skapat er funktion: 
+        </p>
+        <div class="highlight">
+            <ul class="row">
+                <li class="col1">
+                    <h3>Test</h3>
+                    <div>
+                       range(<span class="highlighted">10</span>)
+                    </div>
+                </li>
+                <li class="col2">
+                    <h3>Lösning</h3>
+                    <div>
+                        <code>
+                            <pre>
+const range = function(<span class="highlighted">n = null</span>) {
+    let rangeArray = [];
+    for (<span class="highlighted">let i = 0; i < n; i++</span>) {
+        rangeArray.push(<span class="highlighted">i</span>);
+    }
+    return rangeArray;
+}
+                            </pre>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <h3>Konsolsvar</h3>
+                    <div>
+                        <code id="task2.1"></code>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2>Uppgift 3</h2>
+        <p>
+            Skapa funktionen  <span class="highlighted">sum</span> som returnerar summan av alla siffror i en array. 
+            Det vill säga att anropet  <span class="highlighted">sum([5, 10, 15])</span>; 
+            hade skickat tillbaka siffran  <span class="highlighted">30</span>. För att pröva er funktion kan ni utgå från kodexemplet nedan:
+        </p>
+        <div class="highlight">
+            <ul class="row">
+                <li class="col1">
+                    <h3>Test</h3>
+                    <div>
+                        1. var numbers = [<span class="highlighted">5, 10, 15, 20, 25</span>];
+                    </div> 
+                    <div>
+                        sum(<span class="highlighted">numbers</span>)
+                    </div>
+                    <br>
+                    <div>
+                        2. var numbers2 = [<span class="highlighted">7, 10, 19, 20, 25/span>];
+                    </div>  
+                    <div>
+                        sum(<span class="highlighted">numbers2</span>)
+                    </div>
+                    <br>
+                    <div>
+                        3. var numbers3 = [<span class="highlighted">5, -10, 15, 20, 25</span>];
+                    </div>  
+                    <div>
+                        sum(<span class="highlighted">numbers3</span>)
+                    </div>
+                </li>
+                <li class="col2">
+                    <h3>Lösning</h3>
+                    <div>
+                        <code>
+                            <pre>
+const sum = function(<span class="highlighted"></span>numbersArray = null) {
+    let sumOfnumbersArray = 0;
+    numbersArray.forEach( <span class="highlighted">
+        numbers => {
+        sumOfnumbersArray += numbers;
+    }
+    </span>);
+    return sumOfnumbersArray;
+}
+                            </pre>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <h3>Konsolsvar</h3>
+                    <div>
+                        <code id="task3.1"></code>
+                    </div>
+                    <br>
+                    <div>
+                        <code id="task3.2"></code>
+                    </div>
+                    <br>
+                    <div>
+                        <code id="task3.3"></code>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2>Uppgift 4</h2>
+        <p>
+            Skapa funktionen  
+            <span class="highlighted">countCharacter</span> som räknar antal upprepningar av en bokstav från en sträng. 
+            Det vill säga att anropet  
+            <span class="highlighted">countCharacter("Jane Doe", "e")</span>; hade skickat tillbaka siffran 
+            <span class="highlighted">2</span> 
+            för det finns två stycken  <span class="highlighted">"e"</span> i  <span class="highlighted">"Jane Doe"</span>. För att pröva att er funktion fungerar kan ni utgå från kodexemplet nedan:
+        </p>
+        <div class="highlight">
+            <ul class="row">
+                <li class="col1">
+                    <h3>Test</h3>
+                    <div>
+                        <div>1. var testString1 = "<span class="highlighted">Jane Doe</span>";</div>
+                        <span>
+                            countCharacter(<span class="highlighted">testString1</span>, "<span class="highlighted">e</span>")
+                        </span>
+                    </div> 
+                    <br>
+                    <div>
+                        <div>2. var testString2 = "<span class="highlighted">Abracadabra</span>";</div>
+                        <span>
+                            countCharacter(<span class="highlighted">testString2</span>, "<span class="highlighted">a</span>")
+                        </span>
+                    </div> 
+                </li>
+                <li class="col2">
+                    <h3>Lösning</h3>
+                    <div>
+                        <code>
+                            <pre>
+const countCharacter = function(
+    <span class="highlighted">characters = "", character = ""</span>) {
+    let amountNumberOfCharacter = 0;
+    for (<span class="highlighted">var i = 0; i < characters.length; i++</span>) {
+        if(characters[i] == character) {
+            amountNumberOfCharacter++;
+        }
+    }
+    return amountNumberOfCharacter;
+}
+                            </pre>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <h3>Konsolsvar</h3>
+                    <div>
+                        <code id="task4.1"></code>
+                    </div>
+                    <br>
+                    <div>
+                        <code id="task4.2"></code>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2>Uppgift 5</h2>
+        <p>
+            Skapa funktionen <span class="highlighted">palindrome</span> 
+            som kontrollerar om en sträng är det samma som den är baklänges, 
+            om så är fallet ska denna funktion returnera värdet 
+            <span class="highlighted">true</span> annars <span class="highlighted">false</span>. 
+            <br>
+            Ta en titt på kodexemplet neda för att få mer information om hur funktionen ska fungera:
+        </p>
+        <div class="highlight">
+            <ul class="row">
+                <li class="col1">
+                    <h3>Test</h3>
+                    <div>
+                        <span>
+                            1. palindrome(<span class="highlighted">"sirap - paris"</span>")
+                        </span>
+                    </div> 
+                    <br>
+                    <div>
+                        <span>
+                            2. palindrome(<span class="highlighted">lorem ipsum</span>")
+                        </span>
+                    </div> 
+                </li>
+                <li class="col2">
+                    <h3>Lösning</h3>
+                    <div>
+                        <code>
+                            <pre>
+const palindrome = function(<span class="highlighted">TextToTest = ""</span>) {
+    var reversedText = TextToTest.split('').reverse().join('')
+    if (<span class="highlighted">reversedText == TextToTest</span>) {
+        return true;
+    } else {
+        return false;
+    }
+}
+                            </pre>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <h3>Konsolsvar</h3>
+                    <div>
+                        <code class="highlighted-true" id="task5.1"></code>
+                    </div>
+                    <br>
+                    <div>
+                        <code class="highlighted-true" id="task5.2"></code>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2>Uppgift 6</h2>
+        <p>
+            Skapa ett objekt och spara det i variabeln <span class="highlighted">person</span>. 
+            Detta objekt ska ha följande attribut med respektive värde:
+            <ul class="disc">
+                <li><span class="highlighted">firstname</span>, en sträng innehållande ert förnamn</li>
+                <li><span class="highlighted">astname</span>l, en sträng innehållande ert efternamn</li>
+                <li><span class="highlighted">age</span>, en siffra innehållande er ålder</li>
+                <li><span class="highlighted">family</span>, en array innehållande namn på era familjemedlemmar (vilka och hur många ni väljer är</li>
+            </ul>
+        </p>
+        <div class="highlight">
+            <ul class="row">
+                <li class="col1">
+                    <h3>Test</h3>
+                    <div>
+                        
+                    </div>
+                </li>
+                <li class="col2">
+                    <h3>Lösning</h3>
+                    <div>
+                        <code>
+                            <pre>
+
+                            </pre>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <h3>Konsolsvar</h3>
+                    <div>
+                        <code id="task6.1"></code>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2>Uppgift 7</h2>
+        <p>
+            Skapa funktionen <span class="highlighted">printPerson</span> som tar emot ett objekt som parameter och skriver ut dess attribut 
+            (formatet på utskriften får ni bestämma själva). Ni kan utgå från att objektet är strukturerat/innehåller 
+            samma attribut som det i uppgift 6. För att förstå mer hur det är tänkt att fungera kan ni ta en 
+            titt på kodexemplet nedan:
+        </p>
+        <div class="highlight">
+            <ul class="row">
+                <li class="col1">
+                    <h3>Test</h3>
+                    <div>
+
+                    </div>
+                </li>
+                <li class="col2">
+                    <h3>Lösning</h3>
+                    <div>
+                        <code>
+                            <pre>
+
+                            </pre>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <h3>Konsolsvar</h3>
+                    <div>
+                        <code id="task7.1"></code>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2>Uppgift 8</h2>
+        <p>
+            Skapa funktionen <span class="highlighted">createBox</span> som tar emot två parametrar 
+            (<span class="highlighted">height</span> och <span class="highlighted">width</span>) och returnerar 
+            ett objekt innehållande attributen 
+            <span class="highlighted">height</span> och <span class="highlighted">width</span>. 
+            <br>
+            För att förstå mer hur det är tänkt att fungera kan ni ta en titt på kodexemplet nedan:
+        </p>
+        <div class="highlight">
+            <ul class="row">
+                <li class="col1">
+                    <h3>Test</h3>
+                    <div>
+
+                    </div>
+                </li>
+                <li class="col2">
+                    <h3>Lösning</h3>
+                    <div>
+                        <code>
+                            <pre>
+
+                            </pre>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <h3>Konsolsvar</h3>
+                    <div>
+                    <code id="task8.1"></code>
+                </div>
+                </li>
+            </ul>
+        </div>
+        <h2>Uppgift 9</h2>
+        <p>
+            Skapa funktionen <span class="highlighted">Triangle</span> som tar emot två parametrar (
+            <span class="highlighted">height</span> och <span class="highlighted">width</span>) och returnerar 
+            ett objekt innehållande attributen  
+            <span class="highlighted">height</span> och <span class="highlighted">width</span> 
+            samt en metod (funktion) med namnet <span class="highlighted">area</span>. 
+            När denna metoden anropas ska arean räknas ut och returneras (för att räkna ut arean kan ni 
+            använda formeln <span class="highlighted">height * width / 2)</span>. 
+            <br>
+            För att förstå mer hur det är tänkt att fungera kan ni ta en titt på kodexemplet nedan:
+        </p>
+        <div class="highlight">
+            <ul class="row">
+                <li class="col1">
+                    <h3>Test</h3>
+                    <div>
+
+                    </div>
+                </li>
+                <li class="col2">
+                    <h3>Lösning</h3>
+                    <div>
+                        <code>
+                            <pre>
+
+                            </pre>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <h3>Konsolsvar</h3>
+                    <div>
+                        <code id="task9.1"></code>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2>Uppgift 10</h2>
+        <p>
+            Skapa funktionen <span class="highlighted">attributes</span> som tar emot ett objekt som en parameter och 
+            returnerar en array innehållande alla namnen på objektets attribut. 
+            Ta en titt på kodexemplet nedan för att förstå vad som menas med detta:
+        </p>
+        <div class="highlight">
+            <ul class="row">
+                <li class="col1">
+                    <h3>Test</h3>
+                    <div>
+
+                    </div>
+                </li>
+                <li class="col2">
+                    <h3>Lösning</h3>
+                    <div>
+                        <code>
+                            <pre>
+
+                            </pre>
+                        </code>
+                    </div>
+                </li>
+                <li class="col3">
+                    <h3>Konsolsvar</h3>
+                    <div>
+                        <code id="task10.1"></code>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <script src="customLogMain.js"></script>
+    </body>
+</html>
