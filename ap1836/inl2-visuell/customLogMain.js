@@ -48,8 +48,6 @@ const range = function(n = null) {
     return rangeArray;
 } 
 customLogTask2_1(range(10));
-//var testArray = range(10);
-//console.log('Uppgift 2: testArray(10) =', range(10));
 
 // /**
 //  * Uppgift 3
@@ -123,81 +121,111 @@ customLogTask5_2(palindrome("lorem ipsum"));
 //  * Uppgift 6
 //  * =========
 //  */
-// var customLogTask6_1 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task6.1").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
+var customLogTask6_1 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task6.1").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
 
-// var values = [3, 5, "Jane", true, 144, false];
-// const reversedOrder = values.reverse();
-// customLogTask6_1(reversedOrder); 
+const person = {
+    firstName: 'Carolin',
+    lastName: 'Falk',
+    age: 49,
+    family: ['Mamma', 'Pappa', 'Barn']
+};
+
+customLogTask6_1(person); 
 
 // /**
 //  * Uppgift 7
 //  * =========
 //  */
-// var customLogTask7_1 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task7.1").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
+var customLogTask7_1 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task7.1").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
 
-// var names = ["Jane", "Joe", "Eliza"];
-// var ages = [21, 34, 22];
-// var hasPet = [true, false, true];
-// var multipleArrays = [].concat(names, ages, hasPet);
-// customLogTask7_1(multipleArrays); 
+const agent007 = {
+    firstName: 'James',
+    lastName: 'Bond',
+    age: 42,
+    family: ['M', 'Q', 'Miss Moneypenny']
+};
+function printPerson(personOject) {
+    console.log(
+    'Fullname:', personOject.firstName, personOject.lastName,
+    'Age:', personOject.age,
+    'Family:', personOject.family[0]+',', personOject.family[1]+',', personOject.family[2]);
+}
+
+customLogTask7_1(agent007); 
 
 // /**
 //  * Uppgift 8
 //  * =========
 //  */
-// var customLogTask8_1 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task8.1").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
+var customLogTask8_1 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task8.1").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
+var customLogTask8_2 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task8.2").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
 
-// var actors = ["Sherlock", "Watson", "Bo"];
+function createBox(height = 0, width = 0) {
+    var obj = {
+        height:  height,
+        width: width
+    };
+    return obj;
+} 
 
-// customLogTask8_1(actors.join(' - ')); 
+var box = createBox(15, 20);
+
+customLogTask8_1(box.height); 
+customLogTask8_2(box.width); 
 
 // /**
 //  * Uppgift 9
 //  * =========
 //  */
-// var customLogTask9_1 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task9.1").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
-// var customLogTask9_2 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task9.2").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
-// var customLogTask9_3 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task9.3").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
+var customLogTask9_1 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task9.1").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
+var customLogTask9_2 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task9.2").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
+var customLogTask9_3 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task9.3").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
 
-// var amount = 49; // Less then 50!
+function Triangle(height = 0, base = 0) {
+    var obj = {
+        height: height,
+        width: base,
+        area: function() {
+            return this.height * this.width / 2;
+          }
+    };
+    return obj;
+} 
 
-// if (amount < 50) {
-//     customLogTask9_1("Less then 50!")
-// } else if (amount >= 50 && amount < 65) {
-//     customLogTask9_1("Optimal range for the amount!") 
-// } else {
-//     customLogTask9_1("Too much!")
-// }
+ var tri = Triangle(12, 14);
 
-// var amount = "50"; // Optimal range for the amount!
-
-// if (amount < 50) {
-//     customLogTask9_2("Less then 50!")
-// } else if (amount >= 50 && amount < 65) {
-//     customLogTask9_2("Optimal range for the amount!") 
-// } else {
-//     customLogTask9_2("Too much!")
-// }
-
-// var amount = "65"; // Too much!
-
-// if (amount < 50) {
-//     customLogTask9_3("Less then 50!")
-// } else if (amount >= 50 && amount < 65) {
-//     customLogTask9_3("Optimal range for the amount!") 
-// } else {
-//     customLogTask9_3("Too much!")
-// }
+customLogTask9_1(tri.height);
+customLogTask9_2(tri.width);
+customLogTask9_3(tri.area());
 
 // /**
 //  * Uppgift 10
 //  * =========
 //  */
-// var customLogTask10_1 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task10.1").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
+var customLogTask10_1 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task10.1").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
+var customLogTask10_2 = (...e) => {for(var i=0;i<e.length;i++){document.getElementById("task10.2").innerHTML += (typeof(e[i]) == "object" ? JSON.stringify(e[i]):e[i]) + ""}};
 
-// const hash = '#';
-// let str = '';
-// for (let i = 0; i < 8; i++) {
-//     var increasesTheHash = (str += hash);
-//     customLogTask10_1(increasesTheHash + "<br>");
-// }
+function attributes(objecAttr = null) {
+    let arrayOfObjectAttributs = [];
+    for (const attribute in objecAttr) {
+        arrayOfObjectAttributs.push(attribute);
+      }
+    return arrayOfObjectAttributs;
+} 
+
+var testObject1 = {
+    width: 15,
+    height: 20
+};
+
+var attrsFromObject1 = attributes(testObject1);
+customLogTask10_1(attrsFromObject1);
+
+var testObject2 = {
+    a: 1,
+    b: 2,
+    c: 3
+};
+
+var attrsFromObject2 = attributes(testObject2);
+customLogTask10_2(attrsFromObject2);

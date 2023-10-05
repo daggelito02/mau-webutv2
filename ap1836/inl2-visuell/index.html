@@ -7,6 +7,7 @@
         <style>
             body {
                margin: 2rem;
+               font-size: 1rem;
             }
             ul{
                 list-style-type: none; 
@@ -66,30 +67,22 @@
                 justify-content: space-between;
             }
             .col1 {
-                /* min-width: 35%;
-                flex: 1 1 35%;
-                margin-bottom: 10px; */
+                min-width: 15%;
             }
             .col2 {
-                /* flex: 1 1 45%;
-                min-width: 45%;
-                margin-bottom: 10px; */
+                min-width: 40%;
             }
             .col3 {
-                /* flex: 1 1 20%;*/
                 min-width: 15%; 
-               /* margin-bottom: 10px; */
+                word-wrap: break-word;
             }
-            /* .list-number-container {
-                display: flex;
-            } */
-            /* .list-number-container .list-number {
-                margin-right: .2rem;
-            } */
             pre {
                 text-wrap: pretty;
                 padding: 0;
                 margin: 0;
+            }
+            .nobrake {
+                white-space: nowrap;
             }
         </style>
     </head>
@@ -163,19 +156,19 @@ const min = function(<span class="highlighted">number1 = 0, number2 = 0</span>) 
                 <li class="col3">
                     <h3>Konsolsvar</h3>
                     <div>
-                        <code class="highlighted-true" id="task1.1"></code>
+                        <code id="task1.1"></code>
                     </div>
                     <br>
                     <div>
-                        <code class="highlighted-true" id="task1.2"></code>
+                        <code id="task1.2"></code>
                     </div>
                     <br>
                     <div>
-                        <code class="highlighted-true" id="task1.3"></code>
+                        <code id="task1.3"></code>
                     </div>
                     <br>
                     <div>
-                      <code class="highlighted-true" id="task1.4"></code>  
+                      <code id="task1.4"></code>  
                     </div>
                 </li>
             </ul>
@@ -193,7 +186,7 @@ const min = function(<span class="highlighted">number1 = 0, number2 = 0</span>) 
             <ul class="row">
                 <li class="col1">
                     <h3>Test</h3>
-                    <div>
+                    <div>1.
                        range(<span class="highlighted">10</span>)
                     </div>
                 </li>
@@ -358,15 +351,11 @@ const countCharacter = function(
                 <li class="col1">
                     <h3>Test</h3>
                     <div>
-                        <span>
-                            1. palindrome(<span class="highlighted">"sirap - paris"</span>")
-                        </span>
+                         1. palindrome(<span class="highlighted">"sirap - paris"</span>")
                     </div> 
                     <br>
                     <div>
-                        <span>
-                            2. palindrome(<span class="highlighted">lorem ipsum</span>")
-                        </span>
+                        2. palindrome(<span class="highlighted">lorem ipsum</span>")
                     </div> 
                 </li>
                 <li class="col2">
@@ -413,16 +402,21 @@ const palindrome = function(<span class="highlighted">TextToTest = ""</span>) {
             <ul class="row">
                 <li class="col1">
                     <h3>Test</h3>
-                    <div>
-                        
-                    </div>
+                    <div>1.
+                        person = {}
+                     </div>
                 </li>
                 <li class="col2">
                     <h3>Lösning</h3>
                     <div>
                         <code>
                             <pre>
-
+const person = {
+    firstName: '<span class="highlighted">Carolin</span>,
+    lastName: '<span class="highlighted">Falk</span>',
+    age: <span class="highlighted">49</span>,
+    family: ['<span class="highlighted">Mamma</span>', '<span class="highlighted">Pappa</span>', '<span class="highlighted">Barn</span>']
+};
                             </pre>
                         </code>
                     </div>
@@ -446,16 +440,27 @@ const palindrome = function(<span class="highlighted">TextToTest = ""</span>) {
             <ul class="row">
                 <li class="col1">
                     <h3>Test</h3>
-                    <div>
-
+                    <div>1.
+                        printPerson(<span class="highlighted">agent007</span>)
                     </div>
                 </li>
-                <li class="col2">
+                <li class="col2" style="min-width: 45%;">
                     <h3>Lösning</h3>
                     <div>
                         <code>
                             <pre>
-
+const agent007 = {
+    firstName: '<span class="highlighted">James</span>',
+    lastName: '<span class="highlighted">Bond</span>',
+    age: <span class="highlighted">42</span>,
+    family: ['<span class="highlighted">M</span>', '<span class="highlighted">Q</span>', '<span class="highlighted">Miss Moneypenny</span>']
+};
+function printPerson(personOject) {
+    console.log(
+    'Fullname:', <span class="highlighted">personOject.firstName</span>, <span class="highlighted">personOject.lastName</span>,
+    'Age:', personOject.age,
+    'Family:', <span class="highlighted">personOject.family[0]</span>+',', <span class="highlighted">personOject.family[1]</span>+',', <span class="highlighted">personOject.family[2]</span>);
+}
                             </pre>
                         </code>
                     </div>
@@ -481,25 +486,42 @@ const palindrome = function(<span class="highlighted">TextToTest = ""</span>) {
             <ul class="row">
                 <li class="col1">
                     <h3>Test</h3>
+                    var box = createBox(<span class="highlighted">15, 20</span>);
+                    <br><br>
                     <div>
-
-                    </div>
+                        1. console.log(<span class="highlighted">box.height</span>)
+                   </div> 
+                   <br>
+                   <div>
+                       2. console.log(<span class="highlighted">box.width</span>)
+                   </div> 
                 </li>
                 <li class="col2">
                     <h3>Lösning</h3>
                     <div>
                         <code>
                             <pre>
-
+function createBox(<span class="highlighted">height = 0</span>, <span class="highlighted">width = 0</span>) {
+    var obj = {
+        height:  <span class="highlighted">height</span>,
+        width: <span class="highlighted">width</span>
+    };
+    return obj;
+} 
                             </pre>
                         </code>
                     </div>
                 </li>
                 <li class="col3">
                     <h3>Konsolsvar</h3>
+                    <br><br>
                     <div>
-                    <code id="task8.1"></code>
-                </div>
+                        <code id="task8.1"></code>
+                    </div>
+                    <br>
+                    <div>
+                        <code id="task8.2"></code>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -519,8 +541,18 @@ const palindrome = function(<span class="highlighted">TextToTest = ""</span>) {
             <ul class="row">
                 <li class="col1">
                     <h3>Test</h3>
-                    <div>
-
+                    <div>var tri = Triangle(<span class="highlighted">12, 14</span>);</div>
+                    <br>
+                    <div>1.
+                        console.log(<span class="highlighted">tri.height</span>);
+                    </div>
+                    <br>
+                    <div>2.
+                        console.log(<span class="highlighted">tri.width</span>);
+                    </div>
+                    <br>
+                    <div>3.
+                        console.log(<span class="highlighted">tri.area()</span>);
                     </div>
                 </li>
                 <li class="col2">
@@ -528,15 +560,33 @@ const palindrome = function(<span class="highlighted">TextToTest = ""</span>) {
                     <div>
                         <code>
                             <pre>
-
+function Triangle(<span class="highlighted">height = 0</span>, <span class="highlighted">base = 0</span>) {
+    var obj = {
+        height: <span class="highlighted">height</span>,
+        width: <span class="highlighted">base</span>,
+        area: function() {
+            return <span class="highlighted">this.height</span> * <span class="highlighted">this.width</span> / <span class="highlighted">2</span>;
+            }
+    };
+    return obj;
+}
                             </pre>
                         </code>
                     </div>
                 </li>
                 <li class="col3">
                     <h3>Konsolsvar</h3>
+                    <br><br>
                     <div>
                         <code id="task9.1"></code>
+                    </div>
+                    <br>
+                    <div>
+                        <code id="task9.2"></code>
+                    </div>
+                    <br>
+                    <div>
+                        <code id="task9.3"></code>
                     </div>
                 </li>
             </ul>
@@ -552,7 +602,26 @@ const palindrome = function(<span class="highlighted">TextToTest = ""</span>) {
                 <li class="col1">
                     <h3>Test</h3>
                     <div>
-
+                        <pre>
+var testObject1 = {
+    width: 15,
+    height: 20
+};
+                        </pre>
+                         1. var attrsFromObject1 = attributes(<span class="highlighted">testObject1</span>);<br>
+                        console.log(<span class="highlighted">attrsFromObject1</span>)
+                    </div>
+                    <br>
+                    <div>
+                        <pre>
+var testObject2 = {
+    a: 1,
+    b: 2,
+    c: 3
+};
+                        </pre>
+                        2. var attrsFromObject2 = attributes(<span class="highlighted">testObject2</span>);<br>
+                        console.log(<span class="highlighted">attrsFromObject2</span>)
                     </div>
                 </li>
                 <li class="col2">
@@ -560,15 +629,26 @@ const palindrome = function(<span class="highlighted">TextToTest = ""</span>) {
                     <div>
                         <code>
                             <pre>
-
+function attributes(<span class="highlighted">objecAttr = null</span>) {
+    let arrayOfObjectAttributs = [];
+    for (const attribute in objecAttr) {
+        arrayOfObjectAttributs.push(<span class="highlighted">attribute</span>);
+        }
+    return arrayOfObjectAttributs;
+}
                             </pre>
                         </code>
                     </div>
                 </li>
                 <li class="col3">
                     <h3>Konsolsvar</h3>
+                    <br><br><br><br><br>
                     <div>
                         <code id="task10.1"></code>
+                    </div>
+                    <br><br><br><br><br><br><br><br>
+                    <div>
+                        <code id="task10.2"></code>
                     </div>
                 </li>
             </ul>
