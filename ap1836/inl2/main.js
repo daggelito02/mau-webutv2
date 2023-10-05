@@ -51,10 +51,12 @@ const sum = function(numbersArray = null) {
     return sumOfnumbersArray;
 } 
 
-//var numbers = [5, 10, 15, 20, 25];
-//var numbers = [7, 10, 19, 20, 25];
-var numbers = [5, -10, 15, 20, 25];
-console.log('Uppgift 3: numbers = [5, -10, 15, 20, 25], sum(numbers) =', sum(numbers));
+var numbers = [5, 10, 15, 20, 25];
+var numbers2 = [7, 10, 19, 20, 25];
+var numbers3 = [5, -10, 15, 20, 25];
+console.log('Uppgift 3.1: numbers = [5, -10, 15, 20, 25], sum(numbers) =', sum(numbers));
+console.log('Uppgift 3.2: numbers2 = [5, -10, 15, 20, 25], sum(numbers2) =', sum(numbers2));
+console.log('Uppgift 3.3: numbers3 = [5, -10, 15, 20, 25], sum(numbers3) =', sum(numbers3));
 
 /**
  * Uppgift 4
@@ -187,8 +189,6 @@ var testObject2 = {
     b: 2,
     c: 3
 };
-
-
 
 var attrsFromObject2 = attributes(testObject2);
 console.log('Uppgift 10.2: var attrsFromObject2 = attributes(testObject2) \n console.log(attrsFromObject1) =', attrsFromObject2); // skickar tillbaka ["a", "b", "c"]
