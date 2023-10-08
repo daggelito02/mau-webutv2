@@ -36,8 +36,8 @@ const range = function(n = null) {
     return rangeArray;
 } 
 
-//var testArray = range(10);
-console.log('Uppgift 2: testArray(10) =', range(10));
+var testArray = range(10);
+console.log('Uppgift 2: testArray =', testArray);
 
 /**
  * Uppgift 3

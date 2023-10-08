@@ -47,7 +47,8 @@ const range = function(n = null) {
     }
     return rangeArray;
 } 
-customLogTask2_1(range(10));
+var testArray = range(10);
+customLogTask2_1(testArray);
 
 // /**
 //  * Uppgift 3
