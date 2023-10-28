@@ -15,7 +15,7 @@ error.addEventListener("click",setClass);
 info.addEventListener("click",setClass);
 
 function setClass(element) { 
-    let addClass = element.target.id; //element is the pointer event, target is the clicked element, id is the id-value of the clicked element
+    let addClass = element.target.id;
     messageBox.className = addClass;
 }
 
@@ -57,9 +57,7 @@ function removeListText() {
  * Uppgift 4
  * =========
  */
-// Hämta alla knappar
 var buttons = document.getElementsByClassName("remove-list-item");
-// Gå igenom alla knappar och lägg till ett klick-event
 for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function() {
         const itemText = this.parentElement.innerText;
@@ -99,11 +97,6 @@ form.addEventListener("submit", function(event) {
      * Del 2 validera formulär
      * =========
      */
-    // Förnamn - får endast innehålla 0 till 50 bokstäver
-    // Efternamn - får endast innehålla 0 till 50 bokstäver
-    // Ålder - måste vara en siffra (number) och vara mer än 0
-    // Epost - får endast innehålla 0 till 50 bokstäver
-    // Husdjur - ett husdjur måste vara valt
     let validateFeedback = "passed";
     if (this.elements.firstname.value.length > 50 ) {
         validateFeedback = "Firstname: \"" + this.elements.firstname.value + 

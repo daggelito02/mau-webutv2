@@ -2,22 +2,27 @@
 <html>
     <head>
         <title>Inlämningsuppgift 4</title>
+        <link rel="icon" type="image/png" href="/ap1836/favicon.ico" />
         <meta charset="utf-8">
-        <style>
-            body {
-                margin: 2rem;
-            }
-            ul {
-                list-style-type: none; 
-                padding: 0; 
-                margin: 0; 
-            }
-        </style>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <div id="totop"></div>
+        <p><a href="/ap1836/index.html">Länksida</a></p>
         <h1>Inlämningsuppgift 4</h1>
         <h2>Dag Fredriksson</h2>
-        <p>Inte påbörjad</p>
+        <h3 id="task1">Uppgiften</h3>
+
+        <!-- Sökformulär -->
+        <form action="" method="get" id="search-form">
+            Movie: <input type="text" name="query">
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Här placerar vi vårt resultat -->
+        <div id="result"></div>
+
+        <!-- <p>Main.js för uppgiftens alla svar.</p> -->
         <script src="main.js"></script>
     </body>
 </html>
