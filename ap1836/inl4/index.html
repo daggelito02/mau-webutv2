@@ -15,12 +15,15 @@
 
         <!-- Sökformulär -->
         <form action="" method="get" id="search-form">
-            Movie: <input type="text" name="query">
-            <button type="submit">Search</button>
+            Film: <input type="text" name="query" placeholder="Sök en filmtitel">
+            <button type="submit">Sök</button>
         </form>
 
         <!-- Här placerar vi vårt resultat -->
-        <div id="result"></div>
+        <section id="search-result-area">
+            <h3>Sökresultat: </h3>
+            <div id="result"></div>
+        </section>
 
         <!-- <p>Main.js för uppgiftens alla svar.</p> -->
         <script src="main.js"></script>
