@@ -15,9 +15,7 @@ var result = document.getElementById("result");
 formElem.addEventListener("submit", function(event) {
     event.preventDefault(); 
     query = formElem.query.value;
-    console.log('movieTitle: ', query);
     if (query == null || query == "") {
-        //requestNewMovies();
         result.innerHTML = "<div class='info'>Fyll i en titel</div>";
     } else {
         requestNewMovies();
@@ -25,12 +23,11 @@ formElem.addEventListener("submit", function(event) {
 
 });
 
-// Ajax-begäran av nya bilder
 function requestNewMovies() {
-	result.innerHTML = "<div class='loader'></div>";
-	let request = new XMLHttpRequest(); // Object för Ajax-anropet
+	result.innerHTML = "<div class='loader'></div>"; // Förutom loader indikator, ersätty listan.
+	let request = new XMLHttpRequest();
 	request.open("GET",baseUrl + "?apikey=" + myApiKey + "&s=" + query + "&type=movie");
-	request.send(null); // Skicka begäran till servern
+	request.send(null); 
 	request.onreadystatechange = function () { // Funktion för att avläsa status i kommunikationen
 		if (request.readyState == 4)
 			if (request.status == 200) newMovie(request.responseText);
@@ -40,9 +37,7 @@ function requestNewMovies() {
 
 function newMovie(response) {
 	response = JSON.parse(response);
-    let HTMLcode = "";	
-    //console.log('response: ', response.Response);
-    //console.log('response: ', response.Error);
+    let HTMLcode = ""; // Nollställ listans html.
 
     if (response.Response == "True") {	
         HTMLcode += "<div class='movieGrid'>";
@@ -51,9 +46,8 @@ function newMovie(response) {
             let movieYear = response.Search[i].Year;
             let moviePoster = response.Search[i].Poster;
             if (moviePoster == "N/A") {
-                moviePoster = "img_na.png";
+                moviePoster = "img_na.png"; // Platshållare, om poster saknas.
             }
-            console.log('movieTitle: ', movieTitle);
 
             HTMLcode += "<div class='movieContainer'>";
             HTMLcode += "<h4>" + movieTitle + "</h4>";
@@ -63,15 +57,16 @@ function newMovie(response) {
             
         }
         HTMLcode += "</div>";
-        setTimeout(() => {
+        setTimeout(() => { // Visa laddaren i mins en halv sekund
             result.innerHTML = HTMLcode;
+            window.scrollTo(0, 235); // Sätt lista i mer focus
         }, "500");
 
-    } else if (response.Response == "False") {
+    } else if (response.Response == "False") { // Hantera response meddelanden
         let errorMessage;
         switch(response.Error) {
             case "Movie not found!":
-                errorMessage = "Ingen filmtitel hittades med filmtiteln \"" + query + "\"!"
+                errorMessage = "Ingen filmtitel hittades med namnet \"" + query + "\"!"
               break;
             case "Too many results.":
                 errorMessage = "För stort resultat, pröva att söka mer specifikt."
