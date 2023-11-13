@@ -59,7 +59,7 @@ function newMovie(response) {
         HTMLcode += "</div>";
         setTimeout(() => { // Visa laddaren i mins en halv sekund
             result.innerHTML = HTMLcode;
-            window.scrollTo(0, 235); // Sätt lista i mer focus
+            window.scrollTo(0, 225); // Sätt lista i mer focus
         }, "500");
 
     } else if (response.Response == "False") { // Hantera response meddelanden

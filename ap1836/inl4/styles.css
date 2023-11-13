@@ -30,7 +30,8 @@ body {
     width: 100%;
 }
 #movie-label {
-    width: 300px;
+    max-width: 300px;
+    min-width: 237px;
     height: 2rem;
     padding: 0.2rem 0.4rem;
     font-size: 1.2rem;
@@ -88,8 +89,11 @@ body {
     display: flex;
     flex-wrap: wrap;
     min-width: 250px;
-    max-width: 250px;
+    /* max-width: 250px; */
     padding: 0 1rem 1rem;
+    border-right: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    flex: 1 0 250px;
 }
 .movieContainer h4 {
     margin: 1rem 0 0;
@@ -99,5 +103,14 @@ img.poster {
     margin-right: 100%;
     max-height: 200px;
     max-width: 265px;
-    align-self: end;
+    align-self: start;
 }
+@media screen and (max-width: 768px) {
+    body {
+        margin: 1.2rem;
+    }
+    #search-form button {
+        margin-left: 0.6rem;
+        min-width: 5.5rem;
+    }
+  }
