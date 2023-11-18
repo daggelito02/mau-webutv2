@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Övning Arraymetoder</title>
+        <link rel="icon" type="image/png" href="/ap1836/favicon.ico" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            ul {
+                display: flex;
+                list-style-type: none;
+                padding: 0 0 0 1rem;
+            }
+            li {
+                border: solid #333 1px;
+                border-right: none;
+                padding: 0 .5rem;
+                width: 300px;
+                max-width: 300px;
+            }
+            li:last-child {
+                border-right: solid #333 1px;
+            }
+            h1, h2 {
+                padding-left: 1rem;
+            }
+            h3 {
+                margin-bottom: .5rem;
+            }
+            p {
+                margin: .5rem 0;
+            }
+            pre {
+                overflow-x: auto;
+                background-color: #ededed;
+                padding: 16px 20px;
+                margin: .5rem 0 1rem;
+                border-radius: 2px;
+                line-height: 1.45em;
+            }
+            pre span {
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>Arraymetoder</h1>
+        <h2>Dag Fredriksson</h2>
+
+        <ul>
+            <li>
+                <h3>Övning 1</h3>
+                <p>Transformera alla namnen till versaler.</p>
+                <pre>
+var names = [
+    <span>"Andrew",
+    "Peter",
+    "Eliza",
+    "Kirsten",
+    "Jeanette"</span>
+];                </pre>
+                <p>Se konsolen för svar avövning 1</p>
+            </li>
+            <li>
+                <h3>Övning 2</h3>
+                <p>
+                    Transformera arrayen och lägg till attributet area (innehållande 
+                    den korrekta arean baserat på attributen height och width) på alla element.    
+                </p>
+                <pre>
+var triangles = [
+    <span>{ width: 12, height: 22 },
+    { width: 21, height: 12 },
+    { width: 35, height: 49 },
+    { width: 12, height: 50 },
+    { width: 20, height: 35 }</span>
+];               </pre>
+                <p>Se konsolen för svar avövning 2</p>
+            </li>
+        </ul>
+
+       
+        <script src="array-methods.js"></script>
+    </body>
+</html>
