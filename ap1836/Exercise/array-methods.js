@@ -151,44 +151,19 @@ var triangles = [
 ];
 console.log('triangles: ', triangles);
 
-var areaResult = triangles
+var trianglesResult = triangles
 .map(function(triangles) {
-    return triangles.width * triangles.height;
+
+    let areaResult= triangles.width * triangles.height;
+    triangles.area = areaResult;
+    let width = "width: " + triangles.width;
+    let height = "height: " + triangles.height;
+    let area = "area: " + triangles.area;
+    
+    return width + " " + height + " " + area;
 })
 
-function addAreaToTriangles(triangles, areaResult) {
-    // Vi skapar en tom array för att sedan fylla denna med namn
-    var names = [];
-    // Gå igenom alla objekt och lägg till namnen i vår tomma array
-    for (var i = 0; i < triangles.length; i++) {
-        names.push('width' + triangles[i].width, 'height' + triangles[i].height, 'area' + areaResult);
-        //names.push(data[i].firstname + " " + data[i].lastname);
-    }
-    // Skicka tillbaka alla namn
-    return names;
-}
-
-console.log('areaResult: ', areaResult);
-var trianglesWithArea = addAreaToTriangles(triangles, areaResult);
-console.log('trianglesWithArea: ', trianglesWithArea);
-
-
-
-
-// areaValue = function(area){ 
-//      var areaResult = area.width * area.height;
-//      return triangles.map(areaResult => 'area' + areaResult);
-
-//   };
-//   trianglesAreaValue = triangles.map(areaValue);
-//   console.log('Övning 2: ', trianglesAreaValue);
-
-//   //var array1 = ['a','b','c','d'];
-
-// const map1 = array1.map(x => 'id:' + x);
-
-// console.log(map1);
-
+ console.log('Övning 2: ', trianglesResult);
 
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
@@ -207,6 +182,17 @@ var movies = [
     { title: "Batman: The Dark Knight Returns, Part 2", year: 2013 }
 ];
 
+var movierFromThe90 = movies
+    .filter(function(period) {
+        return period.year > 1989 && period.year < 2000;
+    })
+    .map(function(period) {
+        return period.title + " " + period.year;
+    });
+
+console.log('Övning 3: ', movierFromThe90);
+
+
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 // Övning 4
@@ -224,9 +210,23 @@ var movies = [
     { title: "Batman: The Dark Knight Returns, Part 2", year: 2013 }
 ];
 
+var movierReleased2000 = movies
+    .filter(function(period) {
+        return period.year >= 2000;
+    })
+    .map(function(period) {
+        return period.title;
+    });
+
+console.log('Övning 4: ', movierReleased2000);
+
+
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 // Övning 5
+
+// Filtrera och transformera resultatet till en array 
+// innehållande endast alla id på de tasks som är avklarade och hade hög prioritet.
 
 var data = {
     title: "ToDo List",
@@ -241,11 +241,28 @@ var data = {
         { id: 108, complete: true, priority: "High", title: "Finish the second assignment" }
     ]
 };
+
+var highId = data.tasks
+    .filter(function(priorityFilter) {
+        return priorityFilter.complete == true && priorityFilter.priority == "High"; 
+    })
+    .map(function(priorityFilter) {
+
+        triangles.area = priorityFilter;
+        return priorityFilter.id;
+    });
+
+console.log('Övning 5: ', highId);
 
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 // Övning 6
 
+// Filtrera och transformera resultatet till en array innehållande objekt med 
+// attributet name vars innehåll är title + id (t.ex “Do something (101)”) - där ni 
+// endast tar de tasks som inte är avklarade och inte har låg prioritet. 
+// Det vill säga [{ name: "Do something (101)" }, ...]
+
 var data = {
     title: "ToDo List",
     tasks: [
@@ -259,3 +276,17 @@ var data = {
         { id: 108, complete: true, priority: "High", title: "Finish the second assignment" }
     ]
 };
+
+var nameData = data.tasks
+    .filter(function(priorityFilter) {
+        return priorityFilter.complete == false && priorityFilter.priority != "Low"; 
+    })
+    .map(function(priorityFilter) {
+
+        priorityFilter.name = priorityFilter;
+        let = theId = priorityFilter.id;
+        let = theTitle = priorityFilter.title; 
+        return "name: " + theTitle + "(" + theId + ")";
+    });
+    
+console.log('Övning 6: ', nameData);
